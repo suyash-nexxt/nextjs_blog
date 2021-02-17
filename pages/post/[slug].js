@@ -9,9 +9,13 @@ import { Layout } from '../../components/layout';
 export default function Post({ content, frontmatter }) {
   return (
     <Layout>
+      <h1 className='dark:text-white text-5xl font-bold mt-12'>
+        {frontmatter.title}
+      </h1>
+
       <article>
         <ReactMarkdown
-          className='dark:text-white'
+          className='dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide subpixel-antialiased '
           escapeHtml={false}
           source={content}
           renderers={{ code: CodeBlock }}
@@ -54,7 +58,7 @@ export async function getStaticProps({ params: { slug } }) {
 
   return {
     props: {
-      content: `# ${data.title}\n${content}`,
+      content: `# ${content}`,
       frontmatter
     }
   };
