@@ -1,0 +1,15 @@
+{
+  "siteMetadata": {
+    "title": "Suyash Singh Blog",
+    "author": {
+      "name": "Suyash Singh",
+      "summary": "Front End Web developer"
+    },
+    "description": "Personal website and blog about front end web development",
+    "siteUrl": "",
+    "language": "en-US",
+    "social": {
+      "github": "su988"
+    }
+  }
+}

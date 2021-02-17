@@ -1,7 +1,7 @@
 ---
 title: Long post
 description: A very long post
-tags: ['#testing', '#long', '#text']
+tags: ['testing', 'long', 'text']
 date: 2021-03-11
 ---
 
