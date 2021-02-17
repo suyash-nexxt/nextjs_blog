@@ -8,13 +8,21 @@
     "start": "next start"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "next": "10.0.6",
+    "next-themes": "^0.0.10",
+    "postcss-import": "^14.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-syntax-highlighter": "^15.4.3"
+    "react-syntax-highlighter": "^15.4.3",
+    "react-toggle-dark-mode": "^1.0.3"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.4",
     "gray-matter": "^4.0.2",
-    "react-markdown": "^5.0.3"
+    "postcss": "^8.2.6",
+    "postcss-nested": "^5.0.3",
+    "react-markdown": "^5.0.3",
+    "tailwindcss": "^2.0.3"
   }
 }

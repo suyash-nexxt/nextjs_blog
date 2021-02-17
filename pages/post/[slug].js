@@ -3,20 +3,21 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown/with-html';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-
-const CodeBlock = ({ language, value }) => {
-  return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
-};
+import style from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
+import { Layout } from '../../components/layout';
 
 export default function Post({ content, frontmatter }) {
   return (
-    <article>
-      <ReactMarkdown
-        escapeHtml={false}
-        source={content}
-        renderers={{ code: CodeBlock }}
-      />
-    </article>
+    <Layout>
+      <article>
+        <ReactMarkdown
+          className='dark:text-white'
+          escapeHtml={false}
+          source={content}
+          renderers={{ code: CodeBlock }}
+        />
+      </article>
+    </Layout>
   );
 }
 
@@ -58,3 +59,11 @@ export async function getStaticProps({ params: { slug } }) {
     }
   };
 }
+
+const CodeBlock = ({ language, value }) => {
+  return (
+    <SyntaxHighlighter style={style} language={language}>
+      {value}
+    </SyntaxHighlighter>
+  );
+};
