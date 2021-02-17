@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import ToggleTheme from './toggleTheme';
 import { FaGithub } from 'react-icons/fa';
 
 export default function Navbar() {
@@ -13,13 +14,17 @@ export default function Navbar() {
         <Link href={'/post'} as={'/post'}>
           <li className='mr-3'>Blog</li>
         </Link>
-
         <li className='mr-3'>Projects</li>
         <li className='mr-3'>Contact</li>
         <li className='mr-3'>About me</li>
         <li className='mr-3'>|</li>
+        <li className='mr-4'>
+          <a href={'https://github.com/su988'} target='_blank'>
+            <FaGithub />
+          </a>
+        </li>
         <li>
-          <FaGithub />
+          <ToggleTheme />
         </li>
       </ul>
     </div>

@@ -2,8 +2,6 @@ import React, { Fragment, useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import { useTheme } from 'next-themes';
 import Head from 'next/head';
 
 export function Layout({ children }) {
@@ -27,21 +25,9 @@ export function Layout({ children }) {
 }
 
 const Header = () => {
-  const { setTheme, resolvedTheme } = useTheme();
   const { pathname } = useRouter();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  const toggleDarkMode = (checked) => {
-    const isDarkMode = checked;
-
-    if (isDarkMode) setTheme('dark');
-    else setTheme('light');
-  };
 
   const isRoot = pathname === '/post';
-  const isDarkMode = resolvedTheme === 'dark';
 
   return (
     <header
@@ -53,13 +39,6 @@ const Header = () => {
       <div className={'max-w-md'}>
         {isRoot ? <LargeTitle /> : <SmallTitle />}
       </div>
-      {mounted && (
-        <DarkModeSwitch
-          checked={isDarkMode}
-          onChange={toggleDarkMode}
-          className={isRoot ? 28 : 24}
-        />
-      )}
     </header>
   );
 };
