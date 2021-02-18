@@ -3,6 +3,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import { Layout } from '../../components/layout';
+import { Header } from '../../components/header';
 
 export default function PostList({ posts }) {
   const [postData, setPostData] = useState(posts);
@@ -10,6 +11,7 @@ export default function PostList({ posts }) {
   return (
     <Layout>
       <div>
+        <Header />
         <p className='mb-12 text-xl dark:text-white tracking-wide'>
           The idea behind Sip with Snippets is to share quick snippets and learn
           new things about web development while you enjoy a hot one.
@@ -18,7 +20,7 @@ export default function PostList({ posts }) {
           ({ frontmatter: { title, description, date, tags }, slug }) => (
             <article
               key={slug}
-              className='mb-6 p-5 relative shadow-lg border-gray-300 dark:border-pink-500 bg-gray-50 dark:bg-gray-800 border-r-8'
+              className='mb-6 p-5 relative shadow-lg border-gray-300 dark:border-pink-500 bg-gray-50 dark:bg-gray-800 border-r-8 transform md:hover:scale-105 transition-all hover:opacity-80'
             >
               <header className='flex items-center justify-between'>
                 <Link href={'/post/[slug]'} as={`/post/${slug}`}>
@@ -29,9 +31,11 @@ export default function PostList({ posts }) {
                 <span className='text-xs text-gray-400'>{date}</span>
               </header>
               <section className=''>
-                <p className='text-lg mb-12 mt-4 dark:text-white tracking-wide'>
-                  {description}
-                </p>
+                <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+                  <p className='text-lg mb-12 mt-4 dark:text-white tracking-wide cursor-pointer'>
+                    {description}
+                  </p>
+                </Link>
               </section>
               <footer className='absolute bottom-3'>
                 {tags &&

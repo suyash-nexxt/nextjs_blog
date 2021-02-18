@@ -5,17 +5,19 @@ import ReactMarkdown from 'react-markdown/with-html';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import style from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
 import { Layout } from '../../components/layout';
+import { Header } from '../../components/header';
 
 export default function Post({ content, frontmatter }) {
   return (
     <Layout>
+      <Header />
       <h1 className='dark:text-white text-5xl font-bold mt-12'>
         {frontmatter.title}
       </h1>
 
       <article>
         <ReactMarkdown
-          className='dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide subpixel-antialiased '
+          className='dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide'
           escapeHtml={false}
           source={content}
           renderers={{ code: CodeBlock }}

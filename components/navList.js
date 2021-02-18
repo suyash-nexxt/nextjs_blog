@@ -60,9 +60,7 @@ export default function NavList({ loc, toggleModal, hamburgerOpen }) {
             >
               <FaGithub />
             </a>
-            <span>
-              <ToggleTheme />
-            </span>
+            <ToggleTheme />
           </li>
         </>
       ) : (
@@ -103,7 +101,7 @@ export default function NavList({ loc, toggleModal, hamburgerOpen }) {
               <FaGithub />
             </a>
           </li>
-          <li className='cursor-pointer'>
+          <li>
             <ToggleTheme />
           </li>
         </>
