@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Hamburger from 'hamburger-react';
-import NavList from './navList';
+import NavDesktop from './navDesktop';
+import NavMobile from './navMobile';
 import Modal from '../components/modal';
 
 export default function Navbar() {
@@ -30,10 +31,10 @@ export default function Navbar() {
             </div>
           </Link>
         ) : (
-          <div></div>
+          <div className='dark:text-white text-3xl invisible'>Suyash S</div>
         )}
         <ul className='md:flex dark:text-white text-xl items-center hidden'>
-          <NavList />
+          <NavDesktop />
         </ul>
         <div className='md:hidden dark:text-white z-50'>
           <Hamburger
@@ -49,14 +50,11 @@ export default function Navbar() {
           />
         </div>
       </div>
+
       {showModal && (
         <Modal>
           <ul className=''>
-            <NavList
-              loc={'mobile'}
-              toggleModal={toggleModal}
-              hamburgerOpen={setIsOpen}
-            />
+            <NavMobile toggleModal={toggleModal} hamburgerOpen={setIsOpen} />
           </ul>
         </Modal>
       )}

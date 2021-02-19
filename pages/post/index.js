@@ -8,6 +8,42 @@ import { Header } from '../../components/header';
 export default function PostList({ posts }) {
   const [postData, setPostData] = useState(posts);
 
+  const postUI = postData.map(
+    ({ frontmatter: { title, description, date, tags }, slug }) => (
+      <article
+        key={slug}
+        className='mb-6 p-5 relative shadow-lg border-gray-300 dark:border-pink-500 bg-gray-50 dark:bg-gray-800 border-r-8 transform md:hover:scale-105 transition-all hover:opacity-80'
+      >
+        <header className='flex items-center justify-between'>
+          <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+            <h3 className='text-2xl font-bold dark:text-white cursor-pointer tracking-wide'>
+              {title}
+            </h3>
+          </Link>
+          <span className='text-xs text-gray-400'>{date}</span>
+        </header>
+        <section className=''>
+          <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+            <p className='text-lg mb-12 mt-4 dark:text-white tracking-wide cursor-pointer'>
+              {description}
+            </p>
+          </Link>
+        </section>
+        <footer className='absolute bottom-3'>
+          {tags &&
+            tags.map((tag, id) => (
+              <span
+                key={id}
+                className='mr-2 bg-gray-300 dark:bg-pink-500 dark:text-white p-1.5 text-xs font-bold'
+              >
+                {tag}
+              </span>
+            ))}
+        </footer>
+      </article>
+    )
+  );
+
   return (
     <Layout>
       <div>
@@ -16,41 +52,7 @@ export default function PostList({ posts }) {
           The idea behind Sip with Snippets is to share quick snippets and learn
           new things about web development while you enjoy a hot one.
         </p>
-        {postData.map(
-          ({ frontmatter: { title, description, date, tags }, slug }) => (
-            <article
-              key={slug}
-              className='mb-6 p-5 relative shadow-lg border-gray-300 dark:border-pink-500 bg-gray-50 dark:bg-gray-800 border-r-8 transform md:hover:scale-105 transition-all hover:opacity-80'
-            >
-              <header className='flex items-center justify-between'>
-                <Link href={'/post/[slug]'} as={`/post/${slug}`}>
-                  <h3 className='text-2xl font-bold dark:text-white cursor-pointer tracking-wide'>
-                    {title}
-                  </h3>
-                </Link>
-                <span className='text-xs text-gray-400'>{date}</span>
-              </header>
-              <section className=''>
-                <Link href={'/post/[slug]'} as={`/post/${slug}`}>
-                  <p className='text-lg mb-12 mt-4 dark:text-white tracking-wide cursor-pointer'>
-                    {description}
-                  </p>
-                </Link>
-              </section>
-              <footer className='absolute bottom-3'>
-                {tags &&
-                  tags.map((tag, id) => (
-                    <span
-                      key={id}
-                      className='mr-2 bg-gray-300 dark:bg-pink-500 dark:text-white p-1.5 text-xs font-bold'
-                    >
-                      {tag}
-                    </span>
-                  ))}
-              </footer>
-            </article>
-          )
-        )}
+        {postUI}
       </div>
     </Layout>
   );

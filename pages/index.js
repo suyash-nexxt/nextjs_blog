@@ -18,6 +18,7 @@ export default function Home() {
         <h6>Blog posts</h6>
         <h6>Github</h6>
       </div>
+      <section id='project'>Projects</section>
     </>
   );
 }
