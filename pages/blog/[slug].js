@@ -4,13 +4,13 @@ import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown/with-html';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import style from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
-import { Layout } from '../../components/layout';
+import { BlogLayout } from '../../components/blogLayout';
 import { Header } from '../../components/header';
 
 export default function Post({ content, frontmatter }) {
   return (
-    <Layout>
-      <Header />
+    <BlogLayout>
+      <Header name={'Blog'} />
       <h1 className='dark:text-white text-5xl font-bold mt-12'>
         {frontmatter.title}
       </h1>
@@ -23,7 +23,7 @@ export default function Post({ content, frontmatter }) {
           renderers={{ code: CodeBlock }}
         />
       </article>
-    </Layout>
+    </BlogLayout>
   );
 }
 

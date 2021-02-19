@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import { Layout } from '../../components/layout';
+import { BlogLayout } from '../../components/blogLayout';
 import { Header } from '../../components/header';
 
 export default function PostList({ posts }) {
@@ -15,19 +15,21 @@ export default function PostList({ posts }) {
         className='mb-6 p-5 relative shadow-lg border-gray-300 dark:border-pink-500 bg-gray-50 dark:bg-gray-800 border-r-8 transform md:hover:scale-105 transition-all hover:opacity-80'
       >
         <header className='flex items-center justify-between'>
-          <Link href={'/post/[slug]'} as={`/post/${slug}`}>
-            <h3 className='text-2xl font-bold dark:text-white cursor-pointer tracking-wide'>
+          <h3 className='text-2xl font-bold dark:text-white cursor-pointer tracking-wide'>
+            <Link href={'/post/[slug]'} as={`/post/${slug}`}>
               {title}
-            </h3>
-          </Link>
+            </Link>
+          </h3>
+
           <span className='text-xs text-gray-400'>{date}</span>
         </header>
+
         <section className=''>
-          <Link href={'/post/[slug]'} as={`/post/${slug}`}>
-            <p className='text-lg mb-12 mt-4 dark:text-white tracking-wide cursor-pointer'>
+          <p className='text-lg mb-12 mt-4 dark:text-white tracking-wide cursor-pointer'>
+            <Link href={'/post/[slug]'} as={`/post/${slug}`}>
               {description}
-            </p>
-          </Link>
+            </Link>
+          </p>
         </section>
         <footer className='absolute bottom-3'>
           {tags &&
@@ -45,16 +47,14 @@ export default function PostList({ posts }) {
   );
 
   return (
-    <Layout>
-      <div>
-        <Header />
-        <p className='mb-12 text-xl dark:text-white tracking-wide'>
-          The idea behind Sip with Snippets is to share quick snippets and learn
-          new things about web development while you enjoy a hot one.
-        </p>
-        {postUI}
-      </div>
-    </Layout>
+    <BlogLayout>
+      <Header name={'Blog'} />
+      <p className='mb-12 text-xl dark:text-white tracking-wide'>
+        Idea behind this blog is to share quick short snippets for different use
+        cases and learn new things about web development daily.
+      </p>
+      {postUI}
+    </BlogLayout>
   );
 }
 

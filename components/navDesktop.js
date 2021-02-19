@@ -14,9 +14,9 @@ export default function NavDesktop() {
         <li
           className={`mr-3 hover:opacity-20 transition-all cursor-pointer ${
             styles.my_li
-          } ${router.pathname === '/post' ? styles.active : ''}`}
+          } ${router.pathname === '/blog' ? styles.active : ''}`}
         >
-          <Link href={'/post'} as={'/post'}>
+          <Link href={'/blog'} as={'/blog'}>
             Blog
           </Link>
         </li>

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Layout } from '../../components/layout';
+import { Header } from '../../components/header';
 
 export default function Project() {
   return (
-    <Layout>
-      <div>Projects</div>
-    </Layout>
+    <div className='w-full min-h-screen bg-gray-900'>
+      <Header name={'Projects'} />
+    </div>
   );
 }

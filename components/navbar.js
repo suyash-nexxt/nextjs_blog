@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className='flex justify-between items-center dark:bg-gray-900 pl-4 pr-4 pt-4 pb-10 md:pl-10 md:pr-10'>
+      <div className='flex justify-between items-center dark:bg-gray-900 px-4 pt-4 pb-10 md:px-10'>
         {pathname !== '/' ? (
           <Link href={'/'} as={'/'}>
             <div className='dark:text-white text-3xl cursor-pointer'>
