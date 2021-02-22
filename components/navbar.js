@@ -4,10 +4,12 @@ import NavDesktop from './navDesktop';
 import NavMobile from './navMobile';
 import Modal from '../components/modal';
 import Logo from '../components/logo';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const { pathname } = useRouter();
 
   const toggleModal = () => {
     setShowModal((prevState) => !prevState);
@@ -21,8 +23,13 @@ export default function Navbar() {
 
   return (
     <>
-      <div className='flex justify-between items-center dark:bg-gray-900 px-4 pt-4 pb-10 md:px-10'>
-        <Logo />
+      <div className='flex justify-between items-center dark:bg-gray-900 px-4 py-4 md:px-10 z-10'>
+        {pathname !== '/' ? (
+          <Logo />
+        ) : (
+          <div className='dark:text-white text-3xl invisible'>Suyash S</div>
+        )}
+
         <ul className='md:flex dark:text-white text-xl items-center hidden'>
           <NavDesktop />
         </ul>
@@ -43,7 +50,7 @@ export default function Navbar() {
 
       {showModal && (
         <Modal>
-          <ul className=''>
+          <ul className='transition-all'>
             <NavMobile toggleModal={toggleModal} hamburgerOpen={setIsOpen} />
           </ul>
         </Modal>

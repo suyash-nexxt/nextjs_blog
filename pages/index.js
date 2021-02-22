@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Landing from '../components/landing';
 
 export default function Home() {
   return (
@@ -12,13 +13,9 @@ export default function Home() {
         />
       </Head>
       <div className={styles.container}>
-        <h1>Hi, my name is Su, how do you do ?</h1>
-        <h3>Front end developer</h3>
-        <h6>Portfolio Porjects</h6>
-        <h6>Blog posts</h6>
-        <h6>Github</h6>
+        <Landing />
+        <section id='project'>Projects</section>
       </div>
-      <section id='project'>Projects</section>
     </>
   );
 }

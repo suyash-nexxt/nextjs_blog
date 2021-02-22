@@ -9,7 +9,7 @@ export const Header = ({ name }) => {
 
   return (
     <header
-      className={clsx('flex items-center justify-between ', {
+      className={clsx('flex items-center justify-between mt-10', {
         'mb-8': isRoot,
         'mb-2': !isRoot
       })}
@@ -27,7 +27,7 @@ const LargeTitle = ({ name }) => (
       className={clsx(
         'text-3xl font-black leading-none text-black no-underline font-display',
         'sm:text-8xl',
-        'dark:text-pink-800'
+        'dark:text-pink-700'
       )}
     >
       {name}
