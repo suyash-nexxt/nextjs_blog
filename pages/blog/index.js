@@ -12,11 +12,11 @@ export default function PostList({ posts }) {
     ({ frontmatter: { title, description, date, tags }, slug }) => (
       <article
         key={slug}
-        className='mb-6 p-5 relative shadow-lg border-gray-300 dark:border-pink-500 bg-gray-50 dark:bg-gray-800 border-r-8 transform md:hover:scale-105 transition-all hover:opacity-80'
+        className='mb-6 p-5 relative shadow-lg border-gray-300 dark:border-pink-800 bg-gray-50 dark:bg-gray-800 border-r-8 transform md:hover:scale-105 transition-all hover:bg-gray-100 dark:hover:bg-gray-600'
       >
         <header className='flex items-center justify-between'>
           <h3 className='text-2xl font-bold dark:text-white cursor-pointer tracking-wide'>
-            <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+            <Link href={'/blog/[slug]'} as={`/blog/${slug}`}>
               {title}
             </Link>
           </h3>
@@ -26,7 +26,7 @@ export default function PostList({ posts }) {
 
         <section className=''>
           <p className='text-lg mb-12 mt-4 dark:text-white tracking-wide cursor-pointer'>
-            <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+            <Link href={'/blog/[slug]'} as={`/blog/${slug}`}>
               {description}
             </Link>
           </p>
@@ -36,7 +36,7 @@ export default function PostList({ posts }) {
             tags.map((tag, id) => (
               <span
                 key={id}
-                className='mr-2 bg-gray-300 dark:bg-pink-500 dark:text-white p-1.5 text-xs font-bold'
+                className='mr-2 bg-gray-300 dark:bg-pink-800 dark:text-white p-1.5 text-xs font-bold'
               >
                 {tag}
               </span>

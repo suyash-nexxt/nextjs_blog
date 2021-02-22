@@ -27,7 +27,7 @@ const LargeTitle = ({ name }) => (
       className={clsx(
         'text-3xl font-black leading-none text-black no-underline font-display',
         'sm:text-8xl',
-        'dark:text-white'
+        'dark:text-pink-800'
       )}
     >
       {name}
