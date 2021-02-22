@@ -7,12 +7,11 @@ export default function Landing() {
       className={`px-5 pt-20 md:mt-20 md:ml-20 md:w-4/5 lg:w-3/6 lg:ml-32 lg:mt-16`}
     >
       <h1 className={`text-4xl pb-8 ${styles.name}`}>
-        <div className={styles.block}></div>
         Hi, I'm
         <span
-          className={`${styles2.logo} pl-3 text-7xl md:text-8xl text-gray-800`}
+          className={`${styles2.logo} ${styles.dot_parent} pl-3 text-6xl md:text-8xl text-gray-800`}
         >
-          Suyash
+          Suyash<span className={styles.dot}></span>
         </span>
       </h1>
 
