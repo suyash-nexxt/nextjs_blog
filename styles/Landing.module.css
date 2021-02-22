@@ -1,3 +1,19 @@
+.box {
+  width: 250px;
+}
+
+.name {
+  opacity: 0;
+  animation: info 2s forwards;
+  animation-delay: 0.5s;
+}
+
+.summary {
+  opacity: 0;
+  animation: info 2s forwards;
+  animation-delay: 3s;
+}
+
 .role {
   width: 100%;
   position: relative;
@@ -13,13 +29,13 @@
   background: #ab004d;
   position: absolute;
   animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-  animation-delay: 2s;
+  animation-delay: 1.2s;
   display: flex;
 }
 
 .role_name {
   animation: secFadeIn 2s forwards;
-  animation-delay: 3.2s;
+  animation-delay: 2.5s;
   opacity: 0;
   font-weight: 400;
   font-family: 'Lato';
@@ -60,6 +76,15 @@
 }
 
 @keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes info {
   0% {
     opacity: 0;
   }

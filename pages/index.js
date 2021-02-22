@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <Landing />
-        <section id='project'>Projects</section>
+        {/* <section id='project'>Projects</section> */}
       </div>
     </>
   );
