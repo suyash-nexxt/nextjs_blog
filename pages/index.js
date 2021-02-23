@@ -6,7 +6,11 @@ import Project from '../components/project';
 import Skills from '../components/skills';
 import Footer from '../components/footer';
 
+import { useTheme } from 'next-themes';
+
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <>
       <Head>
@@ -16,7 +20,11 @@ export default function Home() {
           rel='stylesheet'
         />
       </Head>
-      <div className={styles.container}>
+      <div
+        className={
+          theme === 'light' ? `${styles.container}` : `${styles.container_dark}`
+        }
+      >
         <Hero />
         <DownArrow />
         <Project />

@@ -36,11 +36,10 @@ export default function NavDesktop() {
           <FaGithub />
         </a>
       </li>
-      {router.pathname !== '/' ? (
-        <li>
-          <ToggleTheme />
-        </li>
-      ) : null}
+
+      <li>
+        <ToggleTheme />
+      </li>
     </>
   );
 }

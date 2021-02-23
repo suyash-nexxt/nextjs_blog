@@ -8,7 +8,14 @@ module.exports = {
       '1/3': '33%',
       '1/2': '50%'
     },
-    extend: {}
+    extend: {
+      backgroundImage: (theme) => ({
+        'project-github': "url('/github.png')",
+        'project-chat': "url('/chat_app.png')",
+        'project-address': "url('/address.png')",
+        'project-fpl': "url('/fpl.png')"
+      })
+    }
   },
   variants: {
     extend: {

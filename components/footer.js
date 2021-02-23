@@ -10,7 +10,7 @@ export default function Footer() {
         className={`mx-5 md:mx-20 lg:mx-32 flex flex-col content-center items-center`}
       >
         <Logo />
-        <div className='flex  mt-4 mb-6'>
+        <div className='flex mt-4 mb-6'>
           <a href='mailto:suyashvks@gmail.com' className='text-lg mr-5'>
             <MdEmail />
           </a>

@@ -27,13 +27,13 @@ export default function Navbar() {
         {pathname !== '/' ? (
           <Logo />
         ) : (
-          <div className='dark:text-white text-3xl invisible'>Suyash S</div>
+          <div className='dark:text-gray-100 text-3xl invisible'>Suyash S</div>
         )}
 
-        <ul className='md:flex dark:text-white text-xl items-center hidden'>
+        <ul className='md:flex dark:text-gray-100 text-xl items-center hidden'>
           <NavDesktop />
         </ul>
-        <div className='md:hidden dark:text-white z-50'>
+        <div className='md:hidden dark:text-gray-100 z-50'>
           <Hamburger
             toggled={isOpen}
             toggle={setIsOpen}

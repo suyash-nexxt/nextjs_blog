@@ -13,7 +13,11 @@ import FadeInSection from '../components/fadeInSection';
 export default function Skills() {
   return (
     <div className={`mt-24 mx-5 md:mx-20 lg:mx-32 pb-20`}>
-      <h4 className={`text-5xl lg:text-8xl font-black mb-10`}>Skills</h4>
+      <h4
+        className={`dark:text-gray-100 text-5xl lg:text-8xl font-black mb-10`}
+      >
+        Skills
+      </h4>
       <FadeInSection>
         <div className='flex flex-wrap justify-center p-4 lg:mt-20'>
           <div
@@ -52,7 +56,7 @@ export default function Skills() {
             <SiFirebase />
           </div>
           <div
-            className={`flex justify-center min-w-1/3 mb-10 lg:mb-20 text-3xl md:text-5xl text-gray-400`}
+            className={`flex justify-center min-w-1/3 mb-10 lg:mb-20 text-4xl md:text-6xl text-gray-400`}
           >
             <FaNode />
           </div>
