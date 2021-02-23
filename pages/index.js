@@ -1,6 +1,10 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Landing from '../components/landing';
+import Hero from '../components/hero';
+import DownArrow from '../components/downArrow';
+import Project from '../components/project';
+import Skills from '../components/skills';
+import Footer from '../components/footer';
 
 export default function Home() {
   return (
@@ -13,9 +17,12 @@ export default function Home() {
         />
       </Head>
       <div className={styles.container}>
-        <Landing />
-        {/* <section id='project'>Projects</section> */}
+        <Hero />
+        <DownArrow />
+        <Project />
+        <Skills />
       </div>
+      <Footer />
     </>
   );
 }

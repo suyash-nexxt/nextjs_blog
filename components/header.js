@@ -37,7 +37,7 @@ const LargeTitle = ({ name }) => (
 
 const SmallTitle = ({ name }) => (
   <h1>
-    <Link href='/post'>
+    <Link href='/blog'>
       <a
         className={clsx(
           'text-2xl font-black text-black no-underline font-display',

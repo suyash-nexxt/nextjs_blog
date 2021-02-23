@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className='flex justify-between items-center dark:bg-gray-900 px-4 py-4 md:px-10 z-10'>
+      <div className='flex justify-between items-center dark:bg-gray-800 px-4 py-4 md:px-10 z-10'>
         {pathname !== '/' ? (
           <Logo />
         ) : (

@@ -1,7 +1,6 @@
 .box {
   width: 250px;
 }
-
 .name {
   opacity: 0;
   animation: info 2s forwards;
@@ -58,11 +57,38 @@
   opacity: 0;
   font-weight: 400;
   font-family: 'Lato';
-
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+
+.contact_btn {
+  background: linear-gradient(to left, #101828 50%, #ab004d 50%) right;
+  background-size: 200%;
+  transition: 0.3s ease-out;
+}
+
+.contact_btn:hover {
+  background-position: left;
+}
+
+.arrow {
+  border: solid #101828;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  opacity: 0;
+  animation: info 2s forwards;
+  animation-delay: 3s;
+}
+
+/* .skills {
+  opacity: 0;
+  animation: info 2s forwards;
+  animation-delay: 5s;
+} */
 
 @keyframes mainBlock {
   0% {
