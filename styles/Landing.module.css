@@ -1,6 +1,9 @@
+/* Hero.js */
+
 .box {
   width: 250px;
 }
+
 .name {
   opacity: 0;
   animation: info 2s forwards;
@@ -72,6 +75,8 @@
   background-position: left;
 }
 
+/* DownArrow.js */
+
 .arrow {
   border: solid #101828;
   border-width: 0 6px 6px 0;
@@ -82,6 +87,22 @@
   opacity: 0;
   animation: info 2s forwards;
   animation-delay: 3s;
+}
+
+/* FadeInSection.js */
+
+.fade_in_section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade_in_section.is_visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
 @keyframes mainBlock {
