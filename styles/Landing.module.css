@@ -84,12 +84,6 @@
   animation-delay: 3s;
 }
 
-/* .skills {
-  opacity: 0;
-  animation: info 2s forwards;
-  animation-delay: 5s;
-} */
-
 @keyframes mainBlock {
   0% {
     width: 0%;
