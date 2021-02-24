@@ -23,7 +23,7 @@ export default function Footer() {
           </a>
         </div>
         <p className='text-xs tracking-widest text-gray-400'>
-          This website is built with NextJs & Tailwind
+          Built with NextJs & Tailwind
         </p>
       </div>
     </div>
