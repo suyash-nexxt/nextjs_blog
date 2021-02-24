@@ -26,13 +26,15 @@ export default function Project() {
                 channel or join an existing one. Built with ReactJS for frontend
                 and Firebase for user authentication and real time database.
               </p>
-              <a
-                href='https://github.com/su988/react_firebase_chat_app'
-                target='blank'
-                className={`absolute bottom-5 right-10 sm:text-xl lg:text-3xl text-gray-100`}
-              >
-                <FaGithub />
-              </a>
+              <div className={`flex absolute right-5 bottom-5`}>
+                <a
+                  href='https://github.com/su988/react_firebase_chat_app'
+                  target='blank'
+                  className={`sm:text-xl lg:text-3xl text-gray-100`}
+                >
+                  <FaGithub />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -46,13 +48,15 @@ export default function Project() {
                 Job search website which pulls data from Github Jobs api. Built
                 with React using Hooks and context for state management.
               </p>
-              <a
-                href='https://github.com/su988/github_jobs'
-                target='blank'
-                className={`absolute bottom-5 right-10 sm:text-xl lg:text-3xl text-gray-100`}
-              >
-                <FaGithub />
-              </a>
+              <div className={`flex absolute right-5 bottom-5`}>
+                <a
+                  href='https://github.com/su988/github_jobs'
+                  target='blank'
+                  className={`sm:text-xl lg:text-3xl text-gray-100`}
+                >
+                  <FaGithub />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -68,20 +72,22 @@ export default function Project() {
                 Sqlalchemy to export dataframe into Postgres database. Express
                 server with React front end
               </p>
-              <a
-                href='https://github.com/su988/fpli_api'
-                target='blank'
-                className={`absolute bottom-5 right-10 sm:text-xl lg:text-3xl text-gray-100`}
-              >
-                <FaGithub />
-              </a>
-              <a
-                href='https://fpl-dash.herokuapp.com/'
-                target='blank'
-                className={`absolute right-20 bottom-5 md:bottom-4 md:right-24 sm:text-xl lg:text-3xl text-gray-100`}
-              >
-                <MdLaptopMac />
-              </a>
+              <div className={`flex absolute right-5 bottom-5`}>
+                <a
+                  href='https://github.com/su988/fpli_api'
+                  target='blank'
+                  className={`sm:text-xl lg:text-3xl text-gray-100 mr-4`}
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href='https://fpl-dash.herokuapp.com/'
+                  target='blank'
+                  className={`sm:text-xl lg:text-3xl text-gray-100`}
+                >
+                  <MdLaptopMac />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -95,20 +101,22 @@ export default function Project() {
                 A minimalist address book built with vanilla Javascript.
                 Persists data into local storage.
               </p>
-              <a
-                href='https://github.com/su988/address_book_js'
-                target='blank'
-                className={`absolute bottom-5 right-10 sm:text-xl lg:text-3xl text-gray-100`}
-              >
-                <FaGithub />
-              </a>
-              <a
-                href='https://modest-curran-ab2d49.netlify.app/'
-                target='blank'
-                className={`absolute right-20 bottom-5 md:bottom-4 md:right-24 sm:text-xl lg:text-3xl text-gray-100`}
-              >
-                <MdLaptopMac />
-              </a>
+              <div className={`flex absolute right-5 bottom-5`}>
+                <a
+                  href='https://github.com/su988/address_book_js'
+                  target='blank'
+                  className={`sm:text-xl lg:text-3xl text-gray-100 mr-4`}
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href='https://modest-curran-ab2d49.netlify.app/'
+                  target='blank'
+                  className={`sm:text-xl lg:text-3xl text-gray-100`}
+                >
+                  <MdLaptopMac />
+                </a>
+              </div>
             </div>
           </div>
         </div>

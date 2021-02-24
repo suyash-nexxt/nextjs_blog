@@ -34,15 +34,16 @@ export default function Hero() {
         languages and frameworks used in building static and dynamic websites
         for the web.
       </p>
-      <button
-        className={`text-gray-200 p-4 rounded-2xl pointer-cursor shadow md:tracking-wide md:leading-loose ${
+      <a
+        href='mailto:suyashvks@gmail.com'
+        className={`inline-block text-gray-200 p-4 rounded-2xl pointer-cursor shadow md:tracking-wide md:leading-loose ${
           styles.summary
         } ${
           theme === 'light' ? styles.contact_btn_light : styles.contact_btn_dark
         }`}
       >
-        <a href='mailto:suyashvks@gmail.com'>Get in Touch</a>
-      </button>
+        Get in Touch
+      </a>
     </div>
   );
 }
