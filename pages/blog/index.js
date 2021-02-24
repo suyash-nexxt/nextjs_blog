@@ -36,7 +36,7 @@ export default function PostList({ posts }) {
             tags.map((tag, id) => (
               <span
                 key={id}
-                className='mr-2 bg-gray-300 dark:bg-pink-700 dark:text-white p-1.5 text-xs font-bold'
+                className='mr-2 bg-gray-300 dark:bg-pink-700 dark:text-white p-1.5 text-xs font-bold tracking-widest'
               >
                 {tag}
               </span>
@@ -49,7 +49,7 @@ export default function PostList({ posts }) {
   return (
     <BlogLayout>
       <Header name={'Blog'} />
-      <p className='mb-12 text-xl dark:text-white tracking-wide'>
+      <p className='mb-12 text-lg lg:text-xl text-gray-500 dark:text-gray-400 tracking-widest leading-normal'>
         Idea behind this blog is to share quick short snippets for different use
         cases and learn new things about web development daily.
       </p>

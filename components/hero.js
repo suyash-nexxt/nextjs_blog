@@ -12,7 +12,8 @@ export default function Hero() {
         <span
           className={`${styles2.logo} ${styles.dot_parent} pl-3 text-6xl md:text-8xl text-gray-800 dark:text-gray-100 `}
         >
-          Suyash<span className={styles.dot}></span>
+          Suyash
+          <span className={`${styles.dot} bg-gray-800 dark:bg-pink-900`}></span>
         </span>
       </h1>
 
@@ -40,7 +41,7 @@ export default function Hero() {
           theme === 'light' ? styles.contact_btn_light : styles.contact_btn_dark
         }`}
       >
-        Get in Touch
+        <a href='mailto:suyashvks@gmail.com'>Get in Touch</a>
       </button>
     </div>
   );

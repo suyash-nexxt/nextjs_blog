@@ -40,7 +40,7 @@ const SmallTitle = ({ name }) => (
     <Link href='/blog'>
       <a
         className={clsx(
-          'text-2xl font-black text-black no-underline font-display',
+          'text-2xl font-black text-black no-underline font-display hover:opacity-60',
           'dark:text-white'
         )}
       >

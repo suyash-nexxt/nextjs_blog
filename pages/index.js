@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Hero from '../components/hero';
@@ -11,18 +12,18 @@ import { useTheme } from 'next-themes';
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
+  useEffect(() => {
+    setTheme();
+  }, []);
+
   return (
     <>
-      <Head>
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&display=swap'
-          rel='stylesheet'
-        />
-      </Head>
+      <Head></Head>
       <div
         className={
-          theme === 'light' ? `${styles.container}` : `${styles.container_dark}`
+          theme === 'dark'
+            ? `${styles.container_dark}`
+            : `${styles.container_light}`
         }
       >
         <Hero />
