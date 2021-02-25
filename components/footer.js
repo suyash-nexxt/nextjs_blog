@@ -5,7 +5,9 @@ import { MdEmail } from 'react-icons/md';
 
 export default function Footer() {
   return (
-    <div className={`bg-gray-100 h-40 py-10 dark:bg-gray-800 dark:text-white`}>
+    <footer
+      className={`bg-gray-100 h-40 py-10 dark:bg-gray-800 dark:text-white`}
+    >
       <div
         className={`mx-5 md:mx-20 lg:mx-32 flex flex-col content-center items-center`}
       >
@@ -26,6 +28,6 @@ export default function Footer() {
           Built with NextJs & Tailwind
         </p>
       </div>
-    </div>
+    </footer>
   );
 }

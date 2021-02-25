@@ -6,7 +6,9 @@ export default function Hero() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className={`px-5 pt-20 md:pt-40 md:ml-20 md:w-4/5 lg:w-3/6 lg:ml-32 `}>
+    <section
+      className={`px-5 pt-20 md:pt-40 md:ml-20 md:w-4/5 lg:w-3/6 lg:ml-32 `}
+    >
       <h1 className={`text-4xl pb-8 dark:text-gray-100 ${styles.name}`}>
         Hi, I'm
         <span
@@ -44,6 +46,6 @@ export default function Hero() {
       >
         Get in Touch
       </a>
-    </div>
+    </section>
   );
 }

@@ -7,15 +7,15 @@ import styles from '../styles/Landing.module.css';
 
 export default function Project() {
   return (
-    <div className={`mt-24 lg:mt-44 mx-5 md:mx-20 lg:mx-32`}>
+    <section className={`mt-24 lg:mt-44 mx-5 md:mx-20 lg:mx-32`}>
       <h4
         className={`dark:text-gray-100 text-5xl lg:text-8xl font-black mb-10`}
       >
         Projects
       </h4>
       <FadeInSection>
-        <div className='lg:flex flex-wrap'>
-          <div
+        <main className='lg:flex flex-wrap'>
+          <article
             className={`h-60 mb-4 lg:mb-0 lg:border-r-2 lg:min-w-1/2 lg:h-96 bg-project-chat bg-cover relative ${styles.container}`}
           >
             <div className={`${styles.overlay} bg-gray-900 dark:bg-gray-800`}>
@@ -36,9 +36,9 @@ export default function Project() {
                 </a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div
+          <article
             className={`h-60 mb-4 lg:mb-0 lg:border-l-2 lg:min-w-1/2 lg:h-96 bg-gray-800 bg-project-github bg-cover relative ${styles.container}`}
           >
             <div className={`${styles.overlay} bg-gray-900 dark:bg-gray-800`}>
@@ -58,9 +58,9 @@ export default function Project() {
                 </a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div
+          <article
             className={`h-60 mb-4 lg:mb-0 lg:border-t-2 lg:border-r-2 lg:min-w-1/2 lg:h-96 bg-gray-800 bg-gray-800 bg-project-fpl bg-contain md:bg-cover lg:bg-cover relative ${styles.container}`}
           >
             <div className={`${styles.overlay} bg-gray-900 dark:bg-gray-800`}>
@@ -89,9 +89,9 @@ export default function Project() {
                 </a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div
+          <article
             className={`h-60 lg:mb-0 lg:border-t-2 lg:border-l-2 lg:min-w-1/2 lg:h-96 bg-gray-800 bg-project-address bg-contain md:bg-cover lg:bg-contain relative ${styles.container}`}
           >
             <div className={`${styles.overlay} bg-gray-900 dark:bg-gray-800`}>
@@ -118,9 +118,9 @@ export default function Project() {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
+        </main>
       </FadeInSection>
-    </div>
+    </section>
   );
 }
