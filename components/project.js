@@ -32,7 +32,7 @@ export default function Project() {
                 <a
                   href='https://github.com/su988/react_firebase_chat_app'
                   target='blank'
-                  className={`sm:text-xl lg:text-3xl text-gray-100`}
+                  className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <FaGithub />
                 </a>
@@ -56,7 +56,7 @@ export default function Project() {
                 <a
                   href='https://github.com/su988/github_jobs'
                   target='blank'
-                  className={`sm:text-xl lg:text-3xl text-gray-100`}
+                  className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <FaGithub />
                 </a>
@@ -82,14 +82,14 @@ export default function Project() {
                 <a
                   href='https://github.com/su988/fpli_api'
                   target='blank'
-                  className={`sm:text-xl lg:text-3xl text-gray-100 mr-4`}
+                  className={`text-xl lg:text-3xl text-gray-100 mr-4`}
                 >
                   <FaGithub />
                 </a>
                 <a
                   href='https://fpl-dash.herokuapp.com/'
                   target='blank'
-                  className={`sm:text-xl lg:text-3xl text-gray-100`}
+                  className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <MdLaptopMac />
                 </a>
@@ -113,14 +113,14 @@ export default function Project() {
                 <a
                   href='https://github.com/su988/address_book_js'
                   target='blank'
-                  className={`sm:text-xl lg:text-3xl text-gray-100 mr-4`}
+                  className={`text-xl lg:text-3xl text-gray-100 mr-4`}
                 >
                   <FaGithub />
                 </a>
                 <a
                   href='https://modest-curran-ab2d49.netlify.app/'
                   target='blank'
-                  className={`sm:text-xl lg:text-3xl text-gray-100`}
+                  className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <MdLaptopMac />
                 </a>
