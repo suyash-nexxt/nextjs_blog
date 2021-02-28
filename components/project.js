@@ -18,7 +18,9 @@ export default function Project() {
           <article
             className={`h-60 mb-4 lg:mb-0 lg:border-r-2 lg:min-w-1/2 lg:h-96 bg-project-chat bg-cover relative ${styles.container}`}
           >
-            <div className={`${styles.overlay} bg-gray-900 dark:bg-gray-800`}>
+            <div
+              className={`${styles.overlay} bg-gray-900 dark:bg-gray-800 opacity-60 lg:opacity-80`}
+            >
               <p
                 className={`text-base text-gray-100 tracking-widest leading-normal lg:leading-loose m-2 lg:m-6`}
               >
@@ -41,7 +43,9 @@ export default function Project() {
           <article
             className={`h-60 mb-4 lg:mb-0 lg:border-l-2 lg:min-w-1/2 lg:h-96 bg-gray-800 bg-project-github bg-cover relative ${styles.container}`}
           >
-            <div className={`${styles.overlay} bg-gray-900 dark:bg-gray-800`}>
+            <div
+              className={`${styles.overlay} bg-gray-900 dark:bg-gray-800 opacity-80 lg:opacity-90`}
+            >
               <p
                 className={`text-base text-gray-100 tracking-widest leading-normal lg:leading-loose m-6`}
               >
@@ -63,7 +67,9 @@ export default function Project() {
           <article
             className={`h-60 mb-4 lg:mb-0 lg:border-t-2 lg:border-r-2 lg:min-w-1/2 lg:h-96 bg-gray-800 bg-gray-800 bg-project-fpl bg-contain md:bg-cover lg:bg-cover relative ${styles.container}`}
           >
-            <div className={`${styles.overlay} bg-gray-900 dark:bg-gray-800`}>
+            <div
+              className={`${styles.overlay} bg-gray-900 dark:bg-gray-800 opacity-80 lg:opacity-90`}
+            >
               <p
                 className={`text-base text-gray-100 tracking-widest leading-normal lg:leading-loose m-2 lg:m-6`}
               >
@@ -94,7 +100,9 @@ export default function Project() {
           <article
             className={`h-60 lg:mb-0 lg:border-t-2 lg:border-l-2 lg:min-w-1/2 lg:h-96 bg-gray-800 bg-project-address bg-contain md:bg-cover lg:bg-contain relative ${styles.container}`}
           >
-            <div className={`${styles.overlay} bg-gray-900 dark:bg-gray-800`}>
+            <div
+              className={`${styles.overlay} bg-gray-900 dark:bg-gray-800 opacity-80 lg:opacity-90`}
+            >
               <p
                 className={`text-base text-gray-100 tracking-widest leading-normal lg:leading-loose m-6`}
               >
