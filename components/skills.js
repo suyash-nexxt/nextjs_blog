@@ -8,6 +8,10 @@ import { FaNode } from 'react-icons/fa';
 import { SiPostgresql } from 'react-icons/si';
 import { SiFirebase } from 'react-icons/si';
 import { SiRedux } from 'react-icons/si';
+import { SiNextDotJs } from 'react-icons/si';
+import { SiGatsby } from 'react-icons/si';
+import { SiSketch } from 'react-icons/si';
+
 import FadeInSection from '../components/fadeInSection';
 
 export default function Skills() {
@@ -64,6 +68,21 @@ export default function Skills() {
             className={`flex justify-center min-w-1/3 lg:mb-20 text-3xl md:text-5xl dark:text-gray-400 text-gray-800 transform hover:scale-150 transition-all`}
           >
             <SiPostgresql />
+          </article>
+          <article
+            className={`flex justify-center min-w-1/3 lg:mb-20 text-3xl md:text-5xl dark:text-gray-400 text-gray-800 transform hover:scale-150 transition-all`}
+          >
+            <SiNextDotJs />
+          </article>
+          <article
+            className={`flex justify-center min-w-1/3 lg:mb-20 text-3xl md:text-5xl dark:text-gray-400 text-gray-800 transform hover:scale-150 transition-all`}
+          >
+            <SiGatsby />
+          </article>
+          <article
+            className={`flex justify-center min-w-1/3 lg:mb-20 text-3xl md:text-5xl dark:text-gray-400 text-gray-800 transform hover:scale-150 transition-all`}
+          >
+            <SiSketch />
           </article>
         </main>
       </FadeInSection>
