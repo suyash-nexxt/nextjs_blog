@@ -3,7 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Hero from '../components/hero';
 import DownArrow from '../components/downArrow';
-import Project from '../components/project';
+import ProjectGallery from '../components/projectGallery';
 import Skills from '../components/skills';
 import Footer from '../components/footer';
 
@@ -28,7 +28,7 @@ export default function Home() {
       >
         <Hero />
         <DownArrow />
-        <Project />
+        <ProjectGallery />
         <Skills />
       </div>
       <Footer />
