@@ -17,7 +17,7 @@ export default function Post({ content, frontmatter }) {
 
       <article>
         <ReactMarkdown
-          className='dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide'
+          className='text-black dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide'
           escapeHtml={false}
           source={content}
           renderers={{ code: CodeBlock }}

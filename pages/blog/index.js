@@ -50,8 +50,7 @@ export default function PostList({ posts }) {
     <BlogLayout>
       <Header name={'Blog'} />
       <summary className='mb-12 text-lg lg:text-xl text-gray-500 dark:text-gray-400 tracking-widest leading-normal list-none'>
-        Idea behind this blog is to share quick short snippets for different use
-        cases and learn new things about web development daily.
+        Idea behind this blog is to share new things I learn in web development.
       </summary>
       <main>{postUI}</main>
     </BlogLayout>
