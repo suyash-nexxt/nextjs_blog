@@ -12,8 +12,6 @@ export default function Post({ content, frontmatter }) {
   return (
     <>
       <Head>
-        <title>{frontmatter.title}</title>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta name='Description' content={frontmatter.description}></meta>
       </Head>
       <BlogLayout>

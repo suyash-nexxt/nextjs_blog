@@ -50,8 +50,6 @@ export default function PostList({ posts }) {
   return (
     <>
       <Head>
-        <title>Suyash - Blog</title>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
           name='Description'
           content='Personal blog on Web development'
