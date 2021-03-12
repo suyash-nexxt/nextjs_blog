@@ -19,6 +19,7 @@ export default function Footer() {
           <a
             href={'https://github.com/su988'}
             target='_blank'
+            rel='noopener'
             className='text-lg '
           >
             <FaGithub />

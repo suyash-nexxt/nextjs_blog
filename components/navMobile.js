@@ -38,6 +38,7 @@ export default function NavMobile({ toggleModal, hamburgerOpen }) {
         <a
           href={'https://github.com/su988'}
           target='_blank'
+          rel='noopener'
           className='mr-5 hover:opacity-20 transition-all cursor-pointer'
           onClick={() => {
             toggleModal();

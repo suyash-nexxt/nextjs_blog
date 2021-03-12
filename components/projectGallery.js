@@ -33,6 +33,7 @@ export default function ProjectGallery() {
                 <a
                   href='https://github.com/su988/landing_page'
                   target='blank'
+                  rel='noopener'
                   className={`text-xl lg:text-3xl text-gray-100 mr-4`}
                 >
                   <FaGithub />
@@ -40,6 +41,7 @@ export default function ProjectGallery() {
                 <a
                   href='https://landing-page-su988.vercel.app/'
                   target='blank'
+                  rel='noopener'
                   className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <MdLaptopMac />
@@ -65,6 +67,7 @@ export default function ProjectGallery() {
                 <a
                   href='https://github.com/su988/react_firebase_chat_app'
                   target='blank'
+                  rel='noopener'
                   className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <FaGithub />
@@ -89,6 +92,7 @@ export default function ProjectGallery() {
                 <a
                   href='https://github.com/su988/github_jobs'
                   target='blank'
+                  rel='noopener'
                   className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <FaGithub />
@@ -115,6 +119,7 @@ export default function ProjectGallery() {
                 <a
                   href='https://github.com/su988/fpli_api'
                   target='blank'
+                  rel='noopener'
                   className={`text-xl lg:text-3xl text-gray-100 mr-4`}
                 >
                   <FaGithub />
@@ -122,6 +127,7 @@ export default function ProjectGallery() {
                 <a
                   href='https://fpl-dash.herokuapp.com/'
                   target='blank'
+                  rel='noopener'
                   className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <MdLaptopMac />
@@ -146,6 +152,7 @@ export default function ProjectGallery() {
                 <a
                   href='https://github.com/su988/address_book_js'
                   target='blank'
+                  rel='noopener'
                   className={`text-xl lg:text-3xl text-gray-100 mr-4`}
                 >
                   <FaGithub />
@@ -153,6 +160,7 @@ export default function ProjectGallery() {
                 <a
                   href='https://modest-curran-ab2d49.netlify.app/'
                   target='blank'
+                  rel='noopener'
                   className={`text-xl lg:text-3xl text-gray-100`}
                 >
                   <MdLaptopMac />
