@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import Head from 'next/head';
 import { BlogLayout } from '../../components/blogLayout';
 import { Header } from '../../components/header';
 
@@ -47,13 +48,20 @@ export default function PostList({ posts }) {
   );
 
   return (
-    <BlogLayout>
-      <Header name={'Blog'} />
-      <summary className='mb-12 text-lg lg:text-xl text-gray-500 dark:text-gray-400 tracking-widest leading-normal list-none'>
-        Idea behind this blog is to share new things I learn in web development.
-      </summary>
-      <main>{postUI}</main>
-    </BlogLayout>
+    <>
+      <Head>
+        <title>Suyash - Blog</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
+      <BlogLayout>
+        <Header name={'Blog'} />
+        <summary className='mb-12 text-lg lg:text-xl text-gray-500 dark:text-gray-400 tracking-widest leading-normal list-none'>
+          Idea behind this blog is to share new things I learn in web
+          development.
+        </summary>
+        <main>{postUI}</main>
+      </BlogLayout>
+    </>
   );
 }
 

@@ -9,21 +9,27 @@ import { Header } from '../../components/header';
 
 export default function Post({ content, frontmatter }) {
   return (
-    <BlogLayout>
-      <Header name={'Blog'} />
-      <h1 className='dark:text-white text-5xl font-bold mt-12'>
-        {frontmatter.title}
-      </h1>
+    <>
+      <Head>
+        <title>{frontmatter.title}</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
+      <BlogLayout>
+        <Header name={'Blog'} />
+        <h1 className='dark:text-white text-5xl font-bold mt-12'>
+          {frontmatter.title}
+        </h1>
 
-      <article>
-        <ReactMarkdown
-          className='text-black dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide'
-          escapeHtml={false}
-          source={content}
-          renderers={{ code: CodeBlock }}
-        />
-      </article>
-    </BlogLayout>
+        <article>
+          <ReactMarkdown
+            className='text-black dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide'
+            escapeHtml={false}
+            source={content}
+            renderers={{ code: CodeBlock }}
+          />
+        </article>
+      </BlogLayout>
+    </>
   );
 }
 
