@@ -180,3 +180,5 @@ function SignOutButton() {
   return <button onClick={() => auth.signOut()}>Sign Out</button>;
 }
 ```
+
+Source - [Fireship](https://fireship.io/)
