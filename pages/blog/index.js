@@ -9,7 +9,11 @@ import { Header } from '../../components/header';
 export default function PostList({ posts }) {
   const [postData, setPostData] = useState(posts);
 
-  const postUI = postData.map(
+  const sortedPost = postData.sort(
+    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+  );
+
+  const postUI = sortedPost.map(
     ({ frontmatter: { title, description, date, tags }, slug }) => (
       <article
         key={slug}
@@ -32,6 +36,7 @@ export default function PostList({ posts }) {
             </Link>
           </p>
         </section>
+
         <footer className='absolute bottom-3'>
           {tags &&
             tags.map((tag, id) => (
