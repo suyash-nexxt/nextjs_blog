@@ -52,7 +52,7 @@ export default function ContactForm() {
       .then((response) => {
         handleServerResponse(
           true,
-          'Thank you, your message has been submitted.'
+          'Thank you, your message has been submitted!!'
         );
       })
       .catch((error) => {
@@ -69,7 +69,7 @@ export default function ContactForm() {
       <FadeInSection>
         <section className={`lg:flex`}>
           <p
-            className={`hidden lg:block flex-none dark:text-white text-xl tracking-widest leading-loose w-96 lg:mr-40`}
+            className={`hidden lg:block flex-none text-gray-600 dark:text-white text-xl tracking-widest leading-loose w-96 lg:mr-40`}
           >
             Hi! Leave me a message and I'll get back right away.
           </p>
@@ -109,7 +109,11 @@ export default function ContactForm() {
             {status.info.error && (
               <div className='error'>Error: {status.info.msg}</div>
             )}
-            {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+            {!status.info.error && status.info.msg && (
+              <p className='text-gray-600 dark:text-white pt-4 tracking-wide'>
+                {status.info.msg}
+              </p>
+            )}
           </div>
         </section>
       </FadeInSection>
