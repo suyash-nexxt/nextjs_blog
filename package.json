@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "flickity": "^2.2.2",
     "framer-motion": "^3.5.2",

@@ -5,6 +5,7 @@ import Hero from '../components/hero';
 import DownArrow from '../components/downArrow';
 import ProjectGallery from '../components/projectGallery';
 import Skills from '../components/skills';
+import ContactForm from '../components/contactForm';
 import Footer from '../components/footer';
 
 import { useTheme } from 'next-themes';
@@ -35,6 +36,7 @@ export default function Home() {
         <DownArrow />
         <ProjectGallery />
         <Skills />
+        <ContactForm />
       </div>
       <Footer />
     </>
