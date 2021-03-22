@@ -24,6 +24,10 @@ export default function Home() {
           name='Description'
           content='Front end developer in Toronto, Canada'
         ></meta>
+        <meta
+          name='google-site-verification'
+          content='xJ_ak0Bu5rUoZnHFg7HVc4qcBP58qN9IGgE-jwDF3ZE'
+        />
       </Head>
       <div
         className={
