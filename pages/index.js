@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 import Hero from '../components/hero';
 import DownArrow from '../components/downArrow';
 import ProjectGallery from '../components/projectGallery';
-import Skills from '../components/skills';
+import SkillsGallery from '../components/skillsGallery';
 import ContactForm from '../components/contactForm';
 import Footer from '../components/footer';
 
@@ -39,7 +39,7 @@ export default function Home() {
         <Hero />
         <DownArrow />
         <ProjectGallery />
-        <Skills />
+        <SkillsGallery />
         <ContactForm />
       </div>
       <Footer />
