@@ -102,41 +102,6 @@ export default function ProjectGallery() {
           </article>
 
           <article
-            className={`h-60 mb-4 lg:mb-0 lg:border-2 lg:min-w-1/2 lg:h-96 bg-project-fpl bg-contain md:bg-cover relative ${styles.container}`}
-          >
-            <div
-              className={`${styles.overlay} bg-gray-900 dark:bg-gray-800 opacity-80 lg:opacity-90`}
-            >
-              <p
-                className={`text-base text-gray-100 tracking-widest leading-normal lg:leading-loose m-2 lg:m-6`}
-              >
-                Dashboard tracking Fantasy Premiere League data. Python request
-                to get data from FPL API. Pandas library to clean data and
-                Sqlalchemy to export dataframe into Postgres database. Express
-                server with React front end
-              </p>
-              <div className={`flex absolute right-5 bottom-5`}>
-                <a
-                  href='https://github.com/su988/fpli_api'
-                  target='blank'
-                  rel='noopener'
-                  className={`text-xl lg:text-3xl text-gray-100 mr-4`}
-                >
-                  <FaGithub />
-                </a>
-                <a
-                  href='https://fpl-dash.herokuapp.com/'
-                  target='blank'
-                  rel='noopener'
-                  className={`text-xl lg:text-3xl text-gray-100`}
-                >
-                  <MdLaptopMac />
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article
             className={`h-60 lg:mb-0 lg:border-2 lg:min-w-1/2 lg:h-96 bg-project-address bg-contain md:bg-cover lg:bg-contain relative ${styles.container}`}
           >
             <div
