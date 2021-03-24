@@ -6,7 +6,7 @@ import { MdEmail } from 'react-icons/md';
 export default function Footer() {
   return (
     <footer
-      className={`bg-gray-100 h-40 py-10 dark:bg-gray-800 dark:text-white`}
+      className={`bg-gray-100 h-52 lg:mt-44 py-10 dark:bg-gray-800 dark:text-white`}
     >
       <div
         className={`mx-5 md:mx-20 lg:mx-32 flex flex-col content-center items-center`}
@@ -25,7 +25,7 @@ export default function Footer() {
             <FaGithub />
           </a>
         </div>
-        <p className='text-xs tracking-widest text-gray-400'>
+        <p className='text-xs tracking-widest text-gray-400 mt-10'>
           Built with NextJs & Tailwind
         </p>
       </div>
