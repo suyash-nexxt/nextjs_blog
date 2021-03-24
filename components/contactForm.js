@@ -60,7 +60,7 @@ export default function ContactForm() {
       });
   };
   return (
-    <main className={`mx-5 md:mx-20 lg:mx-32 pb-20`}>
+    <main className={`mx-5 md:mx-20 lg:mx-32 pb-40 lg:pb-60`}>
       <h1
         className={`dark:text-gray-100 text-5xl lg:text-8xl font-black mb-10`}
       >
