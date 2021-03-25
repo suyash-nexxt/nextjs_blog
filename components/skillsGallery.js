@@ -18,11 +18,11 @@ import Skill from '../components/skill';
 export default function SkillsGallery() {
   return (
     <section className={`mt-28 lg:mt-44 mx-5 md:mx-20 lg:mx-32 pb-20`}>
-      <h4
+      <h2
         className={`dark:text-gray-100 text-5xl lg:text-8xl font-black mb-10`}
       >
         Skills
-      </h4>
+      </h2>
       <FadeInSection>
         <main className='flex flex-wrap justify-center p-4 lg:mt-20'>
           <Skill icon={<FaHtml5 />} tech='HTML5' />

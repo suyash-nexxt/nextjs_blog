@@ -10,11 +10,11 @@ import styles from '../styles/Landing.module.css';
 export default function ProjectGallery() {
   return (
     <section className={`mt-24 lg:mt-44 mx-5 md:mx-20 lg:mx-32`}>
-      <h4
+      <h2
         className={`dark:text-gray-100 text-5xl lg:text-8xl font-black mb-10`}
       >
         Projects
-      </h4>
+      </h2>
       <FadeInSection>
         <main className='lg:flex flex-wrap'>
           {/* <Project text=''/> */}

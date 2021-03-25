@@ -66,5 +66,3 @@ for (var i = 0; i < array.length; i++) {
   );
 }
 ```
-
-Source - [Educative.io](https://www.educative.io)

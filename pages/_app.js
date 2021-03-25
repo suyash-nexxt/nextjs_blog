@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }) {
           rel='stylesheet'
         />
       </Head>
+
       <ThemeProvider defaultTheme='dark' enableSystem={true} attribute='class'>
         <Navbar />
         <Component {...pageProps} />
