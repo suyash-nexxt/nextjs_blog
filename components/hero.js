@@ -10,7 +10,7 @@ export default function Hero() {
       className={`px-5 pt-20 md:pt-40 md:ml-20 md:w-4/5 lg:w-3/6 lg:ml-32 `}
     >
       <h1 className={`text-4xl pb-8 dark:text-gray-100 ${styles.name}`}>
-        Hi, I'm
+        Hi, I'm{' '}
         <span
           className={`${styles2.logo} ${styles.dot_parent} pl-3 text-6xl md:text-8xl text-gray-800 dark:text-gray-100 `}
         >
