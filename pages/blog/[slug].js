@@ -12,17 +12,17 @@ export default function Post({ content, frontmatter }) {
   return (
     <>
       <Head>
-        <meta name='Description' content={frontmatter.description}></meta>
+        <meta name="Description" content={frontmatter.description}></meta>
       </Head>
       <BlogLayout>
         <Header name={'Blog'} />
-        <h1 className='dark:text-white text-5xl font-bold mt-12'>
+        <h1 className="dark:text-white text-5xl font-bold mt-12">
           {frontmatter.title}
         </h1>
 
         <article>
           <ReactMarkdown
-            className='text-black dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide'
+            className="text-black font-medium dark:text-white prose lg:prose-lg dark:prose-dark tracking-wide"
             escapeHtml={false}
             source={content}
             renderers={{ code: CodeBlock }}
@@ -38,13 +38,13 @@ export async function getStaticPaths() {
 
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace('.md', '')
-    }
+      slug: filename.replace('.md', ''),
+    },
   }));
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   };
 }
 
@@ -61,14 +61,14 @@ export async function getStaticProps({ params: { slug } }) {
 
   const frontmatter = {
     ...data,
-    date: formattedDate
+    date: formattedDate,
   };
 
   return {
     props: {
       content: `# ${content}`,
-      frontmatter
-    }
+      frontmatter,
+    },
   };
 }
 

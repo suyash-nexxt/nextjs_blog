@@ -11,7 +11,7 @@ export const Header = ({ name }) => {
     <header
       className={clsx('flex items-center justify-between mt-10', {
         'mb-8': isRoot,
-        'mb-2': !isRoot
+        'mb-2': !isRoot,
       })}
     >
       <div className={'max-w-md'}>
@@ -27,7 +27,7 @@ const LargeTitle = ({ name }) => (
       className={clsx(
         'text-3xl font-black leading-none text-black no-underline font-display',
         'sm:text-8xl',
-        'dark:text-pink-700'
+        'dark:text-pink-700',
       )}
     >
       {name}
@@ -37,11 +37,11 @@ const LargeTitle = ({ name }) => (
 
 const SmallTitle = ({ name }) => (
   <h1>
-    <Link href='/blog'>
+    <Link href="/blog">
       <a
         className={clsx(
-          'text-2xl font-black text-black no-underline font-display hover:opacity-60',
-          'dark:text-white'
+          'text-2xl font-black underline font-display hover:opacity-60',
+          'dark:text-white',
         )}
       >
         {name}
