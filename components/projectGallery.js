@@ -20,14 +20,14 @@ export default function ProjectGallery() {
           />
           <Project
             text="Real time chat app where users can either create their own
-                channel or join an existing one. Built with ReactJS for frontend and Firebase for user authentication and real time database.Job search website which pulls data from Github Jobs api."
+                channel or join an existing one. Built with ReactJS for frontend and Firebase for user authentication and real time database."
             background="bg-project-chat"
             github="https://github.com/su988/react_firebase_chat_app"
             live="https://github.com/su988/react_firebase_chat_app"
           />
 
           <Project
-            text="Built with React using Hooks and context for state management."
+            text="Job search website which pulls data from Github Jobs api. Built with React using Hooks and context for state management."
             background="bg-project-github"
             github="https://github.com/su988/github_jobs"
             live="https://github.com/su988/github_jobs"
