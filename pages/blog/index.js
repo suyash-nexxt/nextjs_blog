@@ -1,56 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import fs from 'fs';
 import matter from 'gray-matter';
-import Link from 'next/link';
 import Head from 'next/head';
 import { BlogLayout } from '../../components/blogLayout';
 import { Header } from '../../components/header';
+import PostInfo from '../../components/postInfo';
 
-export default function PostList({ posts }) {
-  const [postData, setPostData] = useState(posts);
+export default function PostList({ sortedPost }) {
+  const [posts] = useState(sortedPost);
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const sortedPost = postData.sort(
-    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date),
-  );
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
-  const postUI = sortedPost.map(
-    ({ frontmatter: { title, description, date, tags }, slug }) => (
-      <article
-        key={slug}
-        className="mb-6 p-5 relative shadow-lg border-gray-800 dark:border-pink-700 bg-gray-50 dark:bg-gray-800 border-r-8 transform md:hover:scale-105 transition-all hover:bg-gray-100 dark:hover:bg-gray-600"
-      >
-        <header className="flex items-center justify-between">
-          <h3 className="text-2xl font-bold dark:text-white cursor-pointer tracking-wide">
-            <Link href={'/blog/[slug]'} as={`/blog/${slug}`}>
-              {title}
-            </Link>
-          </h3>
+  useEffect(() => {
+    const results = posts.filter((post) =>
+      post.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase()),
+    );
+    setFilteredPosts(results);
+  }, [searchTerm]);
 
-          <span className="text-xs text-gray-400">{date}</span>
-        </header>
-
-        <section className="">
-          <p className="text-lg mb-12 mt-4 dark:text-white tracking-wide cursor-pointer">
-            <Link href={'/blog/[slug]'} as={`/blog/${slug}`}>
-              {description}
-            </Link>
-          </p>
-        </section>
-
-        <footer className="absolute bottom-3">
-          {tags &&
-            tags.map((tag, id) => (
-              <span
-                key={id}
-                className="mr-2 bg-gray-800 dark:bg-pink-700 text-white p-1.5 text-xs font-bold tracking-widest"
-              >
-                {tag}
-              </span>
-            ))}
-        </footer>
-      </article>
-    ),
-  );
+  const postUI =
+    filteredPosts &&
+    filteredPosts.map(
+      ({ frontmatter: { title, description, date, tags }, slug }) => (
+        <PostInfo
+          title={title}
+          description={description}
+          date={date}
+          tags={tags}
+          slug={slug}
+        />
+      ),
+    );
 
   return (
     <>
@@ -62,6 +46,13 @@ export default function PostList({ posts }) {
       </Head>
       <BlogLayout>
         <Header name={'Blog'} />
+        <input
+          className={`focus:outline-none focus:ring focus:border-blue-300 w-full my-8 p-2 border-2 border-gray-800 dark:border-0 tracking-widest`}
+          type="text"
+          placeholder={'Search'}
+          value={searchTerm}
+          onChange={handleChange}
+        />
         <main>{postUI}</main>
       </BlogLayout>
     </>
@@ -93,9 +84,13 @@ export async function getStaticProps() {
     };
   });
 
+  const sortedPost = posts.sort(
+    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date),
+  );
+
   return {
     props: {
-      posts,
+      sortedPost,
     },
   };
 }
