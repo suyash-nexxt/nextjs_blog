@@ -2,7 +2,7 @@
 title: Firebase auth with username
 description: Adding custom username to firebase authentication
 tags: ['reactJS', 'firebase', 'authentication']
-date: 2021-03-10
+date: 2021-03-13
 ---
 
 Building our own authentication system can be difficult and time consuming. But Firebase with its backend services and easy to use SDK's makes authentication a much simpler process. However it comes with its own constraints. Once such problem is while authenticating a new user, firebase only makes use of email and password OR if user uses third party sign in like Google then in that case firebase will get users public profile from that service - Google.
@@ -35,7 +35,7 @@ const firebaseConfig = {
   projectId: '',
   storageBucket: '',
   messagingSenderId: '',
-  appId: ''
+  appId: '',
 };
 
 if (!firebase.apps.length) {
@@ -162,7 +162,7 @@ function SignInButton() {
   };
 
   return (
-    <button className='btn-google' onClick={signInWithGoogle}>
+    <button className="btn-google" onClick={signInWithGoogle}>
       Sign in with Google
     </button>
   );

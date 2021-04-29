@@ -2,7 +2,7 @@
 title: Javascript Execution
 description: Understanding call stack, web API, and event queue.
 tags: ['javascript']
-date: 2021-03-13
+date: 2021-03-27
 ---
 
 As a beginner learning to code one very popular interview question which kept coming up was - what would the output of the code block below be.
@@ -62,7 +62,7 @@ for (var i = 0; i < array.length; i++) {
         console.log('Item: ' + array[i] + '- index: ' + i);
       };
     })(i),
-    3000
+    3000,
   );
 }
 ```
