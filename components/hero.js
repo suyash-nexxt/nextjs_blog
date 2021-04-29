@@ -33,11 +33,10 @@ export default function Hero() {
       >
         I’m a multidisciplinary designer and developer specializing in front end
         web development. I have experience working with multiple programming
-        languages and frameworks used in building static and dynamic websites
-        for the web.
+        languages and frameworks used in building static and dynamic websites.
       </p>
       <a
-        href='mailto:suyashvks@gmail.com'
+        href="mailto:suyashvks@gmail.com"
         className={`inline-block text-gray-200 p-4 rounded-2xl pointer-cursor shadow md:tracking-wide md:leading-loose ${
           styles.summary
         } ${
