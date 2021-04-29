@@ -13,7 +13,7 @@ export default function ProjectGallery() {
       <FadeInSection>
         <main className="lg:flex flex-wrap">
           <Project
-            text="Find the best time to post on a subreddit. We find the 500 top posts from the past year for a subreddit. This data is visualized in a heatmap grouped by weekday and hour of the day. Built using Reactjs, Styled components. "
+            text="Visualized top 500 posts from the past year for a subreddit in a heatmap grouped by weekday and hour of the day. Worked with tasks, user stories designs and used the GitHub flow with Pull Requests and code reviews. Built with ReactJS & Styled components."
             background="bg-project-reddit"
             github="https://github.com/su988/reddit-timer-su988"
             live="https://reddit-timer-su988.vercel.app/"

@@ -24,19 +24,19 @@ export default function SkillsGallery() {
         Skills
       </h2>
       <FadeInSection>
-        <main className='flex flex-wrap justify-center p-4 lg:mt-20'>
-          <Skill icon={<FaHtml5 />} tech='HTML5' />
-          <Skill icon={<FaCss3 />} tech='CSS3' />
-          <Skill icon={<SiTailwindcss />} tech='Tailwind' />
-          <Skill icon={<SiJavascript />} tech='Javascript' />
-          <Skill icon={<FaReact />} tech='React' />
-          <Skill icon={<SiRedux />} tech='Redux' />
-          <Skill icon={<SiFirebase />} tech='Firebase' />
-          <Skill icon={<FaNode />} tech='NodeJS' />
-          <Skill icon={<SiPostgresql />} tech='PostgreSQL' />
-          <Skill icon={<SiNextDotJs />} tech='NextJS' />
-          <Skill icon={<SiGatsby />} tech='Gatsby' />
-          <Skill icon={<SiSketch />} tech='Sketch' />
+        <main className="flex flex-wrap justify-center p-4 lg:mt-20">
+          <Skill icon={<SiJavascript />} tech="Javascript" />
+          <Skill icon={<FaReact />} tech="React" />
+          <Skill icon={<SiRedux />} tech="Redux" />
+          <Skill icon={<SiFirebase />} tech="Firebase" />
+          <Skill icon={<FaNode />} tech="NodeJS" />
+          <Skill icon={<SiPostgresql />} tech="PostgreSQL" />
+          <Skill icon={<SiNextDotJs />} tech="NextJS" />
+          <Skill icon={<SiGatsby />} tech="Gatsby" />
+          <Skill icon={<SiSketch />} tech="Sketch" />
+          <Skill icon={<FaHtml5 />} tech="HTML5" />
+          <Skill icon={<FaCss3 />} tech="CSS3" />
+          <Skill icon={<SiTailwindcss />} tech="Tailwind" />
         </main>
       </FadeInSection>
     </section>
