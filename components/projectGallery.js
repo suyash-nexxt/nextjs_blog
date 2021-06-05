@@ -18,6 +18,14 @@ export default function ProjectGallery() {
             github="https://github.com/su988/reddit-timer-su988"
             live="https://reddit-timer-su988.vercel.app/"
           />
+
+          <Project
+            text="Note taking app with features to search, filter and categorize. Built with React - custom hooks and context for state management. Styled using Material UI components and MUI icons."
+            background="bg-project-notes"
+            github="https://github.com/su988/notes_react"
+            live="https://github.com/su988/notes_react"
+          />
+
           <Project
             text="Real time chat app where users can either create their own
                 channel or join an existing one. Built with ReactJS for frontend and Firebase for user authentication and real time database."
@@ -31,13 +39,6 @@ export default function ProjectGallery() {
             background="bg-project-github"
             github="https://github.com/su988/github_jobs"
             live="https://github.com/su988/github_jobs"
-          />
-
-          <Project
-            text="Landing page built with NextJS and Tailwind."
-            background="bg-project-landing"
-            github="https://github.com/su988/landing_page"
-            live="https://landing-page-su988.vercel.app/"
           />
         </main>
       </FadeInSection>

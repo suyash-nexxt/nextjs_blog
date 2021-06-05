@@ -13,7 +13,7 @@ module.exports = {
         'project-github': "url('/github.png')",
         'project-chat': "url('/chat_app.png')",
         'project-reddit': "url('/reddit.png')",
-        'project-landing': "url('/landing.png')",
+        'project-notes': "url('/notes.png')",
       }),
     },
   },
