@@ -2,7 +2,7 @@
 title: Javascript Execution
 description: Understanding call stack, web API, and event queue.
 tags: ['javascript']
-date: 2021-03-27
+date: 2021-05-15
 ---
 
 As a beginner learning to code one very popular interview question which kept coming up was - what would the output of the code block below be.
