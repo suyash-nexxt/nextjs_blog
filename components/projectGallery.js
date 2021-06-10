@@ -20,18 +20,18 @@ export default function ProjectGallery() {
           />
 
           <Project
+            text="Note taking app with features to search, filter and categorize. Built with React - custom hooks and context for state management. Styled using Material UI components and MUI icons."
+            background="bg-project-notes"
+            github="https://github.com/su988/notes_react"
+            live="https://notes-react-alpha.vercel.app/"
+          />
+
+          <Project
             text="Real time chat app where users can either create their own
                 channel or join an existing one. Built with ReactJS for frontend and Firebase for user authentication and real time database."
             background="bg-project-chat"
             github="https://github.com/su988/react_firebase_chat_app"
             live="https://github.com/su988/react_firebase_chat_app"
-          />
-
-          <Project
-            text="Note taking app with features to search, filter and categorize. Built with React - custom hooks and context for state management. Styled using Material UI components and MUI icons."
-            background="bg-project-notes"
-            github="https://github.com/su988/notes_react"
-            live="https://github.com/su988/notes_react"
           />
 
           <Project
