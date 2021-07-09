@@ -31,9 +31,9 @@ export default function Hero() {
       <p
         className={`pt-5 pb-10 leading-loose tracking-wide text-lg text-gray-500 dark:text-gray-400 ${styles.summary}`}
       >
-        I’m a multidisciplinary designer and developer specializing in front end
-        web development. I have experience working with multiple programming
-        languages and frameworks used in building static and dynamic websites.
+        I’m a multidisciplinary designer and developer specializing in front-end
+        web development, primarily working with ReactJS. I have experience
+        building static and dynamic websites.
       </p>
       <a
         href="mailto:suyashvks@gmail.com"
