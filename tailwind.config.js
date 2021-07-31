@@ -14,6 +14,7 @@ module.exports = {
         'project-chat': "url('/chat_app.png')",
         'project-reddit': "url('/reddit.png')",
         'project-notes': "url('/notes.png')",
+        'project-ecommerce': "url('/e-commerce.png')",
       }),
     },
   },

@@ -6,7 +6,7 @@ import { MdLaptopMac } from 'react-icons/md';
 export default function Project({ text, background, github, live }) {
   return (
     <article
-      className={`h-60 mb-4 lg:mb-0 lg:border-2 lg:min-w-1/2 lg:h-96 ${background} bg-cover relative ${styles.container}`}
+      className={`h-60 mb-6 sm:shadow-lg lg:mb-0 lg:border-2 lg:min-w-1/2 lg:h-96 ${background} bg-cover relative ${styles.container}`}
     >
       <div
         className={`${styles.overlay} bg-gray-900 dark:bg-gray-800 opacity-80 lg:opacity-90`}
@@ -17,6 +17,7 @@ export default function Project({ text, background, github, live }) {
           {text}
         </p>
         <div className={`flex absolute right-5 bottom-5`}>
+          <span className={`text-gray-100 mr-2`}>CODE</span>
           <a
             href={github}
             target="blank"
@@ -25,6 +26,7 @@ export default function Project({ text, background, github, live }) {
           >
             <FaGithub />
           </a>
+          <span className={`text-gray-100 mr-2`}>LIVE</span>
           <a
             href={live}
             target="blank"
