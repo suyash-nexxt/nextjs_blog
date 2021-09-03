@@ -17,7 +17,7 @@ export default function PostList({ sortedPost }) {
 
   useEffect(() => {
     const results = posts.filter((post) =>
-      post.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase()),
+      post.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredPosts(results);
   }, [searchTerm]);
@@ -33,7 +33,7 @@ export default function PostList({ sortedPost }) {
           tags={tags}
           slug={slug}
         />
-      ),
+      )
     );
 
   return (
@@ -85,7 +85,7 @@ export async function getStaticProps() {
   });
 
   const sortedPost = posts.sort(
-    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date),
+    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
   );
 
   return {
