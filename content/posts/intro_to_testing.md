@@ -116,17 +116,19 @@ export const Header = ({ username }) => {
 
 Now if we go ahead and test this component to check if the username is being displayed like we have tested in the earlier examples we will run into an error.
 
+![FailedTest](/fail1.png)
+
 ```console
 Invariant failed: You should not use <Link> outside a <Router>
 ```
 
-This makes sense because we are testing our Header component in complete isolation so it is not going to be wrapped with BrowserRouter. So what we can do is create a component that wraps the Header component with BrowserRouter.
+This makes sense because we are testing our Header component in complete isolation so it is not going to be wrapped with BrowserRouter which is required for react router components. So what we can do is create a component that wraps the Header component with BrowserRouter.
 
 ```jsx
 // Header.test.js
 
 import { render, screen } from '@testing-library/react';
-import Header from '../Header';
+import { Header } from '../Header';
 import { BrowserRouter } from 'react-router-dom';
 
 const MockHeader = ({ username }) => {
@@ -147,6 +149,8 @@ describe('Header', () => {
 ```
 
 Now our test should work just fine. Also you may have noticed we have introduced _describe_, it simply helps us group common tests together. So if we add more tests for our Header component we can put them all inside the same _describe_ block
+
+![PassedTest](/pass1.png)
 
 ### Testing Async components
 
