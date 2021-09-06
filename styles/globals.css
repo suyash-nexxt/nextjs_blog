@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 * {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lato', sans-serif;
   box-sizing: border-box;
 }
