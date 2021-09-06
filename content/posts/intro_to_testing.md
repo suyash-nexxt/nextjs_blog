@@ -270,4 +270,4 @@ test('if email and password is entered the login button becomes enabled', () => 
 
 Going back to our first login example - it would make sense to combine those two unit tests into a single integrations test as it better resembles how a user would use our application. Integrations test is not about combining unit tests into one test, however, if combining multiple unit tests into a single integrations test resembles a more realistic user flow then it would be the recommended way.
 
-We have only scratched the surafce with React testing library. Next article we will look into End-to-end testing with Cypress.
+We have only scratched the surface of React testing library. To go more in-depth it is best to go through their [documentation](https://testing-library.com/docs/react-testing-library/intro) which has everything explained in detail. In the next article, we will go over End-to-end testing with Cypress.
