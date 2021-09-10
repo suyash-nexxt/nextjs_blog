@@ -2,7 +2,7 @@
 title: Awesome two sum
 description: Progression solving the classic two sum algorithm challenge
 tags: ['javascript', 'algorithm', 'interview']
-date: 2021-06-17
+date: 2021-05-17
 ---
 
 The first time I solved this challenge, I used the classic nested for loops solution and was stoked when leetcode accepted it. But then it dawns on me my code was slower than 80% of the code submitted with a run time of O(n^2).

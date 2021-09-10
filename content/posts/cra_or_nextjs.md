@@ -2,7 +2,7 @@
 title: Create react app or NextJS
 description: If you need SEO use NextJS otherwise use NextJS
 tags: ['react', 'nextjs', 'seo']
-date: 2021-03-13
+date: 2021-04-13
 ---
 
 Recently I was working on my portfolio webite (if you are reading this then you are on it) with two main goals, first - show it to prospective employers and second - get it on first page of google with select keywords. My initial plan was to use create react app only becacuse I was familiar with it but on doing more research I figured Nextjs was the way to go.

@@ -2,7 +2,7 @@
 title: Intro to testing in React
 description: Testing with React testing library.
 tags: ['react', 'react-testing-library']
-date: 2021-07-15
+date: 2021-08-30
 ---
 
 ### Why you should test?
