@@ -8,7 +8,7 @@ export default function ProjectGallery({ background, text, github, live }) {
   return (
     <section className={`mt-24 lg:mt-44 mx-5 md:mx-20 lg:mx-32`}>
       <h2
-        className={`dark:text-gray-100 text-5xl lg:text-8xl font-black mb-10`}
+        className={`dark:text-gray-100 text-5xl lg:text-7xl font-black mb-10`}
       >
         Projects
       </h2>

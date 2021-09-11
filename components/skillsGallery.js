@@ -19,7 +19,7 @@ export default function SkillsGallery() {
   return (
     <section className={`mt-28 lg:mt-44 mx-5 md:mx-20 lg:mx-32 pb-20`}>
       <h2
-        className={`dark:text-gray-100 text-5xl lg:text-8xl font-black mb-10`}
+        className={`dark:text-gray-100 text-5xl lg:text-7xl font-black mb-10`}
       >
         Skills
       </h2>

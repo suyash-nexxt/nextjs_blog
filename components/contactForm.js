@@ -6,26 +6,26 @@ export default function ContactForm() {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
-    info: { error: false, msg: null }
+    info: { error: false, msg: null },
   });
   const [inputs, setInputs] = useState({
     email: '',
-    message: ''
+    message: '',
   });
   const handleServerResponse = (ok, msg) => {
     if (ok) {
       setStatus({
         submitted: true,
         submitting: false,
-        info: { error: false, msg: msg }
+        info: { error: false, msg: msg },
       });
       setInputs({
         email: '',
-        message: ''
+        message: '',
       });
     } else {
       setStatus({
-        info: { error: true, msg: msg }
+        info: { error: true, msg: msg },
       });
     }
   };
@@ -33,12 +33,12 @@ export default function ContactForm() {
     e.persist();
     setInputs((prev) => ({
       ...prev,
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     }));
     setStatus({
       submitted: false,
       submitting: false,
-      info: { error: false, msg: null }
+      info: { error: false, msg: null },
     });
   };
   const handleOnSubmit = (e) => {
@@ -47,7 +47,7 @@ export default function ContactForm() {
     axios({
       method: 'POST',
       url: 'https://formspree.io/f/xwkwgaaa',
-      data: inputs
+      data: inputs,
     })
       .then((response) => {
         handleServerResponse(
@@ -62,7 +62,7 @@ export default function ContactForm() {
   return (
     <main className={`mx-5 md:mx-20 lg:mx-32 pb-40 lg:pb-60`}>
       <h1
-        className={`dark:text-gray-100 text-5xl lg:text-8xl font-black mb-10`}
+        className={`dark:text-gray-100 text-5xl lg:text-7xl font-black mb-10`}
       >
         Contact
       </h1>
@@ -76,26 +76,26 @@ export default function ContactForm() {
           <div className={`flex-grow`}>
             <form onSubmit={handleOnSubmit} className={`flex flex-col `}>
               <input
-                id='email'
-                type='email'
-                name='_replyto'
-                placeholder='Email'
+                id="email"
+                type="email"
+                name="_replyto"
+                placeholder="Email"
                 onChange={handleOnChange}
                 required
                 value={inputs.email}
                 className={`p-4 mb-6 shadow-xl outline-none border border-gray-100 focus:border-gray-400`}
               />
               <textarea
-                id='message'
-                name='message'
-                placeholder='Leave message here'
+                id="message"
+                name="message"
+                placeholder="Leave message here"
                 onChange={handleOnChange}
                 required
                 value={inputs.message}
                 className={`p-4 pb-8 lg:pb-20 mb-6 shadow-xl outline-none border focus:border-gray-400`}
               />
               <button
-                type='submit'
+                type="submit"
                 disabled={status.submitting}
                 className={`p-4 outline-none bg-gray-900 dark:bg-gray-800 text-white cursor-pointer`}
               >
@@ -107,10 +107,10 @@ export default function ContactForm() {
               </button>
             </form>
             {status.info.error && (
-              <div className='error'>Error: {status.info.msg}</div>
+              <div className="error">Error: {status.info.msg}</div>
             )}
             {!status.info.error && status.info.msg && (
-              <p className='text-gray-600 dark:text-white pt-4 tracking-wide'>
+              <p className="text-gray-600 dark:text-white pt-4 tracking-wide">
                 {status.info.msg}
               </p>
             )}
