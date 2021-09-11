@@ -2,8 +2,8 @@ import styles from '../styles/Landing.module.css';
 import styles2 from '../styles/Logo.module.css';
 import { useTheme } from 'next-themes';
 
-export default function Hero() {
-  const { theme, setTheme } = useTheme();
+export default function Hero({ reference, executeScroll }) {
+  const { theme } = useTheme();
 
   return (
     <section
@@ -35,16 +35,16 @@ export default function Hero() {
         web development, primarily working with ReactJS. I have experience
         building static and dynamic websites.
       </p>
-      <a
-        href="mailto:suyashvks@gmail.com"
+      <button
         className={`inline-block text-gray-200 p-4 rounded-2xl pointer-cursor shadow md:tracking-wide md:leading-loose ${
           styles.summary
         } ${
           theme === 'light' ? styles.contact_btn_light : styles.contact_btn_dark
         }`}
+        onClick={executeScroll}
       >
         Get in Touch
-      </a>
+      </button>
     </section>
   );
 }

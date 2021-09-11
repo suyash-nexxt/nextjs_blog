@@ -23,17 +23,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className='flex justify-between items-center dark:bg-gray-800 px-4 py-4 md:px-10 z-10'>
+      <nav className="flex justify-between items-center dark:bg-gray-900 px-4 py-4 md:px-10 z-10">
         {pathname !== '/' ? (
           <Logo />
         ) : (
-          <div className='dark:text-gray-100 text-3xl invisible'>Suyash S</div>
+          <div className="dark:text-gray-100 text-3xl invisible">Suyash S</div>
         )}
 
-        <ul className='md:flex dark:text-gray-100 text-xl items-center hidden'>
+        <ul className="md:flex dark:text-gray-100 text-xl items-center hidden">
           <NavDesktop />
         </ul>
-        <div className='md:hidden dark:text-gray-100 z-50'>
+        <div className="md:hidden dark:text-gray-100 z-50">
           <Hamburger
             toggled={isOpen}
             toggle={setIsOpen}
@@ -50,7 +50,7 @@ export default function Navbar() {
 
       {showModal && (
         <Modal>
-          <ul className='transition-all'>
+          <ul className="transition-all">
             <NavMobile toggleModal={toggleModal} hamburgerOpen={setIsOpen} />
           </ul>
         </Modal>

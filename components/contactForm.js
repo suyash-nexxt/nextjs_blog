@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import FadeInSection from '../components/fadeInSection';
+import styles from '../styles/Landing.module.css';
+import { useTheme } from 'next-themes';
 
-export default function ContactForm() {
+export default function ContactForm({ reference }) {
+  const { theme } = useTheme();
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -60,7 +63,7 @@ export default function ContactForm() {
       });
   };
   return (
-    <main className={`mx-5 md:mx-20 lg:mx-32 pb-40 lg:pb-60`}>
+    <main className={`mx-5 md:mx-20 lg:mx-32 pb-40 lg:pb-60`} ref={reference}>
       <h1
         className={`dark:text-gray-100 text-5xl lg:text-7xl font-black mb-10`}
       >
@@ -97,7 +100,11 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={status.submitting}
-                className={`p-4 outline-none bg-gray-900 dark:bg-gray-800 text-white cursor-pointer`}
+                className={`p-4 outline-none bg-gray-900 dark:bg-gray-800 text-white cursor-pointer ${
+                  theme === 'light'
+                    ? styles.contact_btn_light
+                    : styles.contact_btn_dark
+                }`}
               >
                 {!status.submitting
                   ? !status.submitted
