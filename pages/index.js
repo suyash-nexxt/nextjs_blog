@@ -8,6 +8,7 @@ import ProjectGallery from '../components/projectGallery';
 import SkillsGallery from '../components/skillsGallery';
 import ContactForm from '../components/contactForm';
 import Footer from '../components/footer';
+import FadeInSection from '../components/fadeInSection';
 import { getBlogPosts } from '../utils/getBlogPosts';
 
 import { useTheme } from 'next-themes';
@@ -62,7 +63,7 @@ export default function Home({ recentPosts }) {
           >
             Recent Posts
           </h2>
-          {postUI}
+          <FadeInSection>{postUI}</FadeInSection>
         </section>
         <ProjectGallery />
         <SkillsGallery />
