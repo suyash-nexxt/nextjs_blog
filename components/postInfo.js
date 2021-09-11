@@ -14,11 +14,11 @@ function PostInfo({ title, description, date, tags, slug }) {
           </Link>
         </h3>
 
-        <span className="text-xs text-gray-400">{date}</span>
+        <span className="text-xs text-gray-600 dark:text-gray-400">{date}</span>
       </header>
 
       <section className="">
-        <p className="text-lg mb-12 mt-4 dark:text-white tracking-wide cursor-pointer">
+        <p className="text-lg mb-12 mt-4 dark:text-gray-400 tracking-wide cursor-pointer">
           <Link href={'/blog/[slug]'} as={`/blog/${slug}`}>
             {description}
           </Link>

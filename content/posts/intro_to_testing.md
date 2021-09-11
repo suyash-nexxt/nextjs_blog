@@ -1,5 +1,5 @@
 ---
-title: Intro to testing in React
+title: Intro to testing
 description: Testing with React testing library.
 tags: ['react', 'react-testing-library']
 date: 2021-08-30
