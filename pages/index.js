@@ -15,8 +15,6 @@ import { useTheme } from 'next-themes';
 export default function Home({ recentPosts }) {
   const { theme, setTheme } = useTheme();
 
-  console.log(recentPosts);
-
   useEffect(() => {
     setTheme();
   }, []);
@@ -56,7 +54,9 @@ export default function Home({ recentPosts }) {
       >
         <Hero />
         <DownArrow />
-        <section className={`mt-24 lg:mt-44 mx-5 md:mx-20 lg:mx-32`}>
+        <section
+          className={`mt-24 lg:mt-44 mx-5 md:mx-20 lg:mx-32 ${styles.recent_posts}`}
+        >
           <h2
             className={`dark:text-gray-100 text-5xl lg:text-7xl font-black mb-10`}
           >
