@@ -5,11 +5,11 @@ tags: ['react', 'react-testing-library']
 date: 2021-09-10
 ---
 
-### What is End-to-end testing?
+## What is End-to-end testing?
 
 End-to-end testing is the process of loading up your web application in the browser and testing things as if it was a real user performing these actions such as clicking buttons, filling out forms etc. The goal is to simulate what a real user scenario looks like from start to finish.
 
-### Why Cypress?
+## Why Cypress?
 
 Cypress is a testing library built on top of Mocha which runs in the browser. It is easy to set up with React and has a minimal learning curve which makes it the go-to library for end-to-end testing. Few key features which set Cypress apart from other testing libraries are listed below. You can read more about them in their [documentation](https://docs.cypress.io/guides/overview/why-cypress#Features).
 
@@ -22,7 +22,7 @@ Cypress is a testing library built on top of Mocha which runs in the browser. It
 7. Screenshots and Videos
 8. Cross Browser Testing
 
-### Setting up Cypress
+## Setting up Cypress
 
 Setting up _Cypress_ with React is a straight forward process. To install cypress in your project -
 
@@ -64,7 +64,7 @@ describe('My First Test', function () {
 
 ![Chrome Cypress](/cy2.png)
 
-### Cypress Commands
+## Cypress Commands
 
 _Cypress_ has multiple commands which you should read up more about on their [documentation](https://docs.cypress.io/api/table-of-contents). Lets just quickly go over the three most often used commands in my experience.
 
@@ -88,13 +88,13 @@ Side note - If you have _eslint_ installed it will throw an error when you try t
 }
 ```
 
-### Cypress Assertions
+## Cypress Assertions
 
 Assertions help us insure that the tests we write are quality code and as we intended it to be. Once again there are multiple _assertions_ which you should go though in thier [documentation](https://docs.cypress.io/guides/references/assertions).
 
 > Assertions describe the desired state of your elements, your objects, and your application.
 
-### Testing with Cypress
+## Testing with Cypress
 
 Lets take an example of a [note app](https://notes-react-alpha.vercel.app/) I built earlier. It is a very simple app where the user can create new notes. We will test a scenario where user clicks on the add note button to open the form modal and enters title, description, category before adding the new note. Once the user has added a new note, they can toggle the complete button which will change the number of completed notes.
 
@@ -191,7 +191,7 @@ describe('creating a new note', () => {
 
 ![Cypress test pass](/cy5.png)
 
-### Cypress Tests with HTTP requests
+## Cypress Tests with HTTP requests
 
 So far, we have been dealing with testing applications that are not making _HTTP_ requests to a back-end service. One thing that's great about _Cypress_ is that it is inherently asynchronous so, it will not change much when it comes to testing applications that make _HTTP_ requests.
 
@@ -233,6 +233,6 @@ So what the above test block is doing is it is intercepting a _GET_ request to t
 
 ![Cypress Test Passes](/cy7.png)
 
-### Conclusion
+## Conclusion
 
 Think we have covered most basics to get started with _Cypress_. I am sure there is a lot more to learn about this library and I am definitely excited to dive in more. But for now this should be enough to help you get started writing end-to-end tests for your applications.

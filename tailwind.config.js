@@ -32,7 +32,7 @@ module.exports = {
           css: {
             color: theme('colors.gray.100'),
             h2: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.400'),
             },
             h3: {
               color: theme('colors.gray.400'),
