@@ -42,14 +42,14 @@ Before we dive into each part of _Redux & react-redux_, it would be nice to get 
 
 ## Putting React & Redux together using Hooks
 
-Now, using this redux life cycle lets see how react and redux would work together in a real world application.
+Now, using this redux life cycle lets see how react and redux would work together in a real world application. You can also take a look at this [github repo](https://github.com/su988/react-redux-blog) for the final result.
 
 1. In redux if we ever want to update the state we need to create an action. **Action creator** is simply a function which returns that action.
 
 ```js
-// ./actionCreators/
+// ./actions/ticketAction.js
 
-const addTicket = (ticket) => {
+export const addTicket = (ticket) => {
   return {
     type: 'ADD_TICKET',
     payload: ticket,
@@ -60,11 +60,11 @@ const addTicket = (ticket) => {
 2. An **action** is just an object that by convention has a property _type_ which is the name of the action (string) and a property _payload_ which is the data. In this example, the user wants to ADD_TICKET (action type) and the payload will be the data they submit with the form. Again by convention, an action type is always all caps and usually saved in a separate file with all other constants.
 
 ```js
-// ./actionCreators/
+// ./actions/ticketAction.js
 
 import {ADD_TICKET} from './constants/ActionTypes;
 
-const addTicket = (ticket) => {
+export const addTicket = (ticket) => {
   return {
     type: ADD_TICKET,
     payload: ticket,
@@ -80,7 +80,7 @@ const addTicket = (ticket) => {
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux'; <---------------
-import { addTicket } from '../redux/actions';
+import { addTicket } from '../redux/actions/ticketAction';
 
 export const BookTicketForm = () => {
   const { register, handleSubmit } = useForm();
@@ -110,13 +110,16 @@ export const BookTicketForm = () => {
 import { ADD_TICKET } from '../constants/ActionTypes';
 
 const initialState = {
-  tickets = []
+  tickets: [],
 };
 
 export const ticketReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TICKET:
-      return [...state, action.payload]
+      return {
+        ...state,
+        tickets: [...state.tickets, { ...action.payload }],
+      };
     default:
       return state;
   }
@@ -180,20 +183,20 @@ Ok so our React app is set up with Redux and we are able to add data inside our 
 Lets say we have a cart component that lists all the tickets a user has added. We can use the _useSelector_ hook to access the state object from our store. In the following example we are simply destructuring and accessing the _tickets_ key from the state.
 
 ```jsx
-// Cart.js
+// CartListing.js
 
 import React from 'react';
 import { useSelector } from 'react-redux'; <----------
 import { CartItem } from '../CartItem';
 
 export const CartListing = () => {
-  const { tickets } = useSelector((state) => state); <----------
+  const { tickets } = useSelector((state) => state.tickets); <----------
 
   return (
     <>
-      {tickets?.map(ticket) => (
+      {tickets?.map((ticket) => (
         <CartItem ticket={ticket} />
-      )}
+      ))}
     </>
   );
 };
@@ -230,7 +233,7 @@ const CartListing = ({tickets}) => {
 };
 
 const mapStateToProps = (state) => ({ <---------------
-  tickets: state.tickets
+  tickets: state.tickets.tickets
 });
 
 export default connect(mapStateToProps)(CartListing); <---------------
@@ -291,7 +294,7 @@ import thunk from 'redux-thunk'; <---------------
 export const store = createStore(reducers, {}, applyMiddleware(thunk)); <---------------
 ```
 
-Now lets say we have an action creator which makes an external API call to get data which it returns in the action payload. It can be achieved with the help of redux-thunk.
+Now let us say we have an action creator which makes an external API call to get data that it returns in the action payload. It is achievable with the help of redux-thunk.
 
 ```js
 
@@ -313,3 +316,5 @@ const getProducts = () => {
 
 We have covered the basics we need to get started building react-redux applications.
 However this way of working with Redux can get overwhelming because of all the different parts there are to it. This is where Redux toolkit comes to our rescue as it really simplifies it and we no longer need an action creator, action. We will learn to work with Redux toolkit in the next article.
+
+[GITHUB REPO](https://github.com/su988/react-redux-blog)
