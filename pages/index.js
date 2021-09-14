@@ -67,7 +67,7 @@ export default function Home({ recentPosts }) {
 }
 
 export async function getStaticProps() {
-  const recentPosts = getBlogPosts().slice(0, 2);
+  const recentPosts = getBlogPosts().slice(0, 3);
 
   return {
     props: {
