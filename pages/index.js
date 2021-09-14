@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useRef } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Hero from '../components/hero';
@@ -11,14 +11,11 @@ import Footer from '../components/footer';
 import FadeInSection from '../components/fadeInSection';
 import { getBlogPosts } from '../utils/getBlogPosts';
 
-import { useTheme } from 'next-themes';
-
 export default function Home({ recentPosts }) {
-  const { theme, setTheme } = useTheme();
+  const formEl = useRef(null);
 
-  useEffect(() => {
-    setTheme();
-  }, []);
+  const executeScroll = () =>
+    formEl.current.scrollIntoView({ block: 'end', behavior: 'smooth' });
 
   const postUI =
     recentPosts &&
@@ -30,6 +27,7 @@ export default function Home({ recentPosts }) {
           date={date}
           tags={tags}
           slug={slug}
+          key={slug}
         />
       )
     );
@@ -46,14 +44,8 @@ export default function Home({ recentPosts }) {
           content="xJ_ak0Bu5rUoZnHFg7HVc4qcBP58qN9IGgE-jwDF3ZE"
         />
       </Head>
-      <div
-        className={
-          theme === 'dark'
-            ? `${styles.container_dark}`
-            : `${styles.container_light}`
-        }
-      >
-        <Hero />
+      <main className={`dark:bg-gray-900`}>
+        <Hero executeScroll={executeScroll} reference={formEl} />
         <DownArrow />
         <section
           className={`mt-24 lg:mt-44 mx-5 md:mx-20 lg:mx-32 ${styles.recent_posts}`}
@@ -67,15 +59,15 @@ export default function Home({ recentPosts }) {
         </section>
         <ProjectGallery />
         <SkillsGallery />
-        <ContactForm />
-      </div>
+        <ContactForm reference={formEl} />
+      </main>
       <Footer />
     </>
   );
 }
 
 export async function getStaticProps() {
-  const recentPosts = getBlogPosts().slice(0, 2);
+  const recentPosts = getBlogPosts().slice(0, 3);
 
   return {
     props: {

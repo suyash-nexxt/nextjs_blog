@@ -5,19 +5,19 @@ tags: ['react', 'react-testing-library']
 date: 2021-08-30
 ---
 
-### Why you should test?
+## Why you should test?
 
 The idea behind testing is to check whether our application behaves the way we expect it to work. It also safeguards us against unwanted behaviour when changes are made. Tests make our application easy to maintain and can serve as documentation to understand what we expect from each component or function.
 
-### What should you test?
+## What should you test?
 
 Large applications can make testing time-consuming hence it is essential to prioritize tests based on high-value features, edge cases, things that break easy, component testing, user interaction etc.
 
-### Types of test
+## Types of test
 
 The three most common types of testing in React are unit tests, integration tests and end-to-end testing. Unit testing is about testing a small part of the code - like a function. Integrations test combines multiple unit tests together into one test to check if they are working in sync in your application. Finally, end-to-end tests run from front-end to back-end. The goal is to simulate what a real user scenario looks like from start to finish.
 
-### Setup React testing library with React
+## Setting up React testing library
 
 Next, let's go over the basic setup for React testing library. So the awesome part is CRA comes with React testing library right off the bat (check _package.json_). The name of every file we create for writing tests has to correspond with the component we are testing. For example, if we are testing a login component in Login.tsx then the test file will be called Login.test.js and so on. Once again if you take a look at _package.json_ file you can see the script we need to run to execute our tests.
 
@@ -25,7 +25,7 @@ Next, let's go over the basic setup for React testing library. So the awesome pa
 > npm run test
 ```
 
-### Anatomy of Tests
+## Anatomy of Tests
 
 Once we install CRA, it comes with a default App.test.js file which looks like -
 
@@ -49,7 +49,7 @@ test('renders learn react link', () => {
 - The above code block just checks if the text is present, but most times we want to imitate how a user will interact with our application through click events, type events, drag events etc. In these situations we use _userEvent_ but there is also an option to use _fireEvent_. Behind the scenes, _userEvent_ uses the _fireEvent_. You can consider _fireEvent_ being the low-level api, while _userEvent_ provides more advanced simulation of browser interactions.
 - The last thing is to assert that the results are as expected (_expect_) which either make our test pass (green) or fail (red).
 
-### Unit Test
+## Unit Test
 
 Let's say we have a login component Login.tsx. It has two inputs for email, password and buttons to login, cancel. Our app is designed in such a way that on page load login button is disabled by default and once we enter credentials the button becomes enabled. Now, this is a feature we could write automated tests for rather than checking manually on separate occasions.
 
@@ -94,7 +94,7 @@ Ok let's go over what is going on in the above code. We have two test blocks -
 - We are checking for when the user 'types' in to the input and to get hold of the element we are using placeholder text since these inputs do not have any label.
 - Finally we are asserting that the button becomes enabled when values are passed to the inputs.
 
-### Testing with React Router components
+## Testing with React Router components
 
 Let's say we have a component we want to test which has a Link component from react router inside it.
 
@@ -152,7 +152,7 @@ Now our test should work just fine. Also you may have noticed we have introduced
 
 ![PassedTest](/pass1.png)
 
-### Testing Async components
+## Testing Async components
 
 Below we have a ProductsList component which makes a GET request to an external API, gets the data and renders it in a list. Now we want to test that we get one of the product and it is rendered on to our page. Because it is asynchronous, the data wont be availabe on render and we will not be able to find the element on page load and it will make our test fail. To combat this issue we can use _async_ _await_ and _findBy_
 
@@ -252,7 +252,7 @@ describe('ProductsList', () => {
 });
 ```
 
-### Integration Test
+## Integration Test
 
 ```jsx
 // Login.test.js
@@ -269,5 +269,7 @@ test('if email and password is entered the login button becomes enabled', () => 
 ```
 
 Going back to our first login example - it would make sense to combine those two unit tests into a single integrations test as it better resembles how a user would use our application. Integrations test is not about combining unit tests into one test, however, if combining multiple unit tests into a single integrations test resembles a more realistic user flow then it would be the recommended way.
+
+## Conclusion
 
 We have only scratched the surface of React testing library. To go more in-depth it is best to go through their [documentation](https://testing-library.com/docs/react-testing-library/intro) which has everything explained in detail. In the next article, we will go over End-to-end testing with Cypress.

@@ -1,3 +1,4 @@
+import React from 'react';
 import '../styles/globals.css';
 import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module

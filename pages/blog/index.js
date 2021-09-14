@@ -46,7 +46,7 @@ export default function PostList({ sortedPosts }) {
       <BlogLayout>
         <Header name={'Blog'} />
         <input
-          className={`focus:outline-none focus:ring focus:border-blue-300 w-full my-8 p-2 border-2 border-gray-800 dark:border-0 tracking-widest`}
+          className={`focus:outline-none focus:ring focus:border-blue-300 w-full my-8 p-2 border-2 border-gray-800 dark:border-pink-700 tracking-widest`}
           type="text"
           placeholder={'Search'}
           value={searchTerm}
