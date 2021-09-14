@@ -42,7 +42,7 @@ Before we dive into each part of _Redux & react-redux_, it would be nice to get 
 
 ## Putting React & Redux together using Hooks
 
-Now, using this redux life cycle lets see how react and redux would work together in a real world application.
+Now, using this redux life cycle lets see how react and redux would work together in a real world application. You can also take a look at this [github repo](https://github.com/su988/react-redux-blog) for the final result.
 
 1. In redux if we ever want to update the state we need to create an action. **Action creator** is simply a function which returns that action.
 
@@ -316,3 +316,5 @@ const getProducts = () => {
 
 We have covered the basics we need to get started building react-redux applications.
 However this way of working with Redux can get overwhelming because of all the different parts there are to it. This is where Redux toolkit comes to our rescue as it really simplifies it and we no longer need an action creator, action. We will learn to work with Redux toolkit in the next article.
+
+[GITHUB REPO](https://github.com/su988/react-redux-blog)
