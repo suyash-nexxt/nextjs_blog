@@ -1,7 +1,7 @@
 ---
 title: Intro to Redux with React
 description: Learn react-redux using hooks, connect and middlewares
-tags: ['react', 'redux', 'redux-toolkit']
+tags: ['react', 'redux', 'react-redux']
 date: 2021-09-15
 ---
 

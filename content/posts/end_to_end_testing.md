@@ -5,6 +5,8 @@ tags: ['react', 'react-testing-library']
 date: 2021-09-10
 ---
 
+In the [previous article](https://suyash.ca/blog/intro_to_testing) we introduced unit and integration tests with React testing library. In this article we will be discussing End-to-end testing with Cypress library.
+
 ## What is End-to-end testing?
 
 End-to-end testing is the process of loading up your web application in the browser and testing things as if it was a real user performing these actions such as clicking buttons, filling out forms etc. The goal is to simulate what a real user scenario looks like from start to finish.
