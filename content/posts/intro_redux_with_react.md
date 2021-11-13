@@ -2,7 +2,7 @@
 title: Intro to Redux with React
 description: Learn react-redux using hooks, connect and middlewares
 tags: ['react', 'redux', 'react-redux']
-date: 2021-09-15
+date: 2021-10-15
 ---
 
 This tutorial assumes you have experience working with React and, at some point, have faced the problem of prop drilling. Just in case, take a look at the following example to give you some context about prop drilling.
