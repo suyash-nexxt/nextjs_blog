@@ -1,16 +1,17 @@
 import React from 'react';
 import { FaHtml5 } from 'react-icons/fa';
 import { FaCss3 } from 'react-icons/fa';
-import { SiTailwindcss } from 'react-icons/si';
+import { SiConfluence } from 'react-icons/si';
 import { SiJavascript } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
 import { FaNode } from 'react-icons/fa';
 import { SiPostgresql } from 'react-icons/si';
-import { SiFirebase } from 'react-icons/si';
-import { SiRedux } from 'react-icons/si';
-import { SiNextDotJs } from 'react-icons/si';
-import { SiGatsby } from 'react-icons/si';
-import { SiSketch } from 'react-icons/si';
+import { FaGithub } from 'react-icons/fa';
+import { SiAmazonaws } from 'react-icons/si';
+import { SiPostman } from 'react-icons/si';
+import { SiJest } from 'react-icons/si';
+import { SiJira } from 'react-icons/si';
+import { SiTypescript } from 'react-icons/si';
 
 import FadeInSection from '../components/fadeInSection';
 import Skill from '../components/skill';
@@ -27,16 +28,16 @@ export default function SkillsGallery() {
         <main className="flex flex-wrap justify-center p-4 lg:mt-20">
           <Skill icon={<SiJavascript />} tech="Javascript" />
           <Skill icon={<FaReact />} tech="React" />
-          <Skill icon={<SiRedux />} tech="Redux" />
-          <Skill icon={<SiFirebase />} tech="Firebase" />
-          <Skill icon={<FaNode />} tech="NodeJS" />
-          <Skill icon={<SiPostgresql />} tech="PostgreSQL" />
-          <Skill icon={<SiNextDotJs />} tech="NextJS" />
-          <Skill icon={<SiGatsby />} tech="Gatsby" />
-          <Skill icon={<SiSketch />} tech="Sketch" />
+          <Skill icon={<SiJest />} tech="Jest" />
           <Skill icon={<FaHtml5 />} tech="HTML5" />
           <Skill icon={<FaCss3 />} tech="CSS3" />
-          <Skill icon={<SiTailwindcss />} tech="Tailwind" />
+          <Skill icon={<SiTypescript />} tech="TypeScript" />
+          <Skill icon={<SiPostman />} tech="Postman" />
+          <Skill icon={<SiPostgresql />} tech="PostgreSQL" />
+          <Skill icon={<SiAmazonaws />} tech="AWS" />
+          <Skill icon={<FaGithub />} tech="Git" />
+          <Skill icon={<SiJira />} tech="Jira" />
+          <Skill icon={<SiConfluence />} tech="Confluence" />
         </main>
       </FadeInSection>
     </section>

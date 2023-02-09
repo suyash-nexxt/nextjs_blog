@@ -23,7 +23,7 @@ export default function Hero({ reference, executeScroll }) {
         <div className={styles.role}>
           <div className={styles.block}></div>
           <p className={`${styles.role_name} dark:text-gray-100 `}>
-            Front End Developer
+            QA engineer
           </p>
         </div>
       </div>
@@ -31,9 +31,10 @@ export default function Hero({ reference, executeScroll }) {
       <p
         className={`pt-5 pb-10 leading-loose tracking-wide text-lg text-gray-500 dark:text-gray-400 ${styles.summary}`}
       >
-        I’m a multidisciplinary designer and developer specializing in front-end
-        web development, primarily working with ReactJS. I have experience
-        building static and dynamic websites.
+        I’m a professional Quality Assurance engineer and trained software
+        developer. My multidisciplinary skills allow me to not only find bugs
+        but also help in debugging the root cause. I also enjoy building things
+        with React and Javascript.
       </p>
       <button
         className={`inline-block text-gray-200 p-4 rounded-2xl pointer-cursor shadow md:tracking-wide md:leading-loose ${

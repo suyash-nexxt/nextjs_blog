@@ -12,20 +12,20 @@ export default function Footer() {
         className={`mx-5 md:mx-20 lg:mx-32 flex flex-col content-center items-center`}
       >
         <Logo />
-        <div className='flex mt-4 mb-6'>
-          <a href='mailto:suyashvks@gmail.com' className='text-lg mr-5'>
+        <div className="flex mt-4 mb-6">
+          <a href="mailto:suyashvks@gmail.com" className="text-lg mr-5">
             <MdEmail />
           </a>
           <a
-            href={'https://github.com/su988'}
-            target='_blank'
-            rel='noopener'
-            className='text-lg '
+            href={'https://github.com/suyash-nexxt'}
+            target="_blank"
+            rel="noopener"
+            className="text-lg "
           >
             <FaGithub />
           </a>
         </div>
-        <p className='text-xs tracking-widest text-gray-400 mt-10'>
+        <p className="text-xs tracking-widest text-gray-400 mt-10">
           Built with NextJs & Tailwind
         </p>
       </div>

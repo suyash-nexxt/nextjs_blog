@@ -26,13 +26,17 @@ export default function NavDesktop() {
         <li
           className={`mr-3 hover:opacity-20 transition-all cursor-pointer ${styles.my_li}`}
         >
-          <a href='mailto:suyashvks@gmail.com'>Contact</a>
+          <a href="mailto:suyashvks@gmail.com">Contact</a>
         </li>
       </span>
 
-      <li className='mr-3 hidden md:block'>|</li>
-      <li className='mr-4 hover:opacity-20 transition-all cursor-pointer'>
-        <a href={'https://github.com/su988'} target='_blank' rel='noopener'>
+      <li className="mr-3 hidden md:block">|</li>
+      <li className="mr-4 hover:opacity-20 transition-all cursor-pointer">
+        <a
+          href={'https://github.com/suyash-nexxt'}
+          target="_blank"
+          rel="noopener"
+        >
           <FaGithub />
         </a>
       </li>
